@@ -15,7 +15,7 @@
     rel='stylesheet'>
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
@@ -102,7 +102,7 @@
     </div>
 
     <!--Script.js-->
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html> 
