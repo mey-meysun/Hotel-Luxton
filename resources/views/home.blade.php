@@ -21,7 +21,7 @@
     <!-- Theme Style -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <title>LuxuryHotel Free HTML Template by Untree.co</title>
+    <title>Luxton Hotel</title>
   </head>
   <body>
 
