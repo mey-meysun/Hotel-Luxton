@@ -17,6 +17,8 @@
     <!--Custom CSS-->
     {{-- <link rel="stylesheet" href="../css/style.css"> --}}
     <link href="{{ asset('assets/css/style1.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style2.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style3.css') }}" rel="stylesheet">
 
 </head>
 
@@ -50,7 +52,7 @@
         <button type="submit" class="btn animation" style="--i:21;--j:4">Sign Up</button>
 
         <div class="linkTxt animation" style="--i:22; --j:5">
-            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+            <p>Already have an account? <a href="login" class="login-link">Login</a></p>
         </div>
 
     </form>
