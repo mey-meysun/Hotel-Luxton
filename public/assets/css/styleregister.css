@@ -1,101 +1,111 @@
-/* Background styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-  }
-  
-  /* Container styling */
-  .login-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px 25px;
-    width: 400px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Kombinasi aqua dan pink pastel */
+    color: #444;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  /* Icon styling */
-  .icon-container {
-    font-size: 4rem;
-    color: #6dd5ed;
-    margin-bottom: 20px;
-  }
-  
-  /* Title styling */
-  h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Input container styling */
-  .input-container {
+    transition: all 0.3s ease;
+}
+
+.form h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #5d5d8f; /* Warna ungu pastel */
+}
+
+.form-group {
     position: relative;
     margin-bottom: 20px;
-  }
-  
-  .input-container i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #6dd5ed;
-  }
-  
-  .input-container input {
+}
+
+.form-group input {
     width: 100%;
-    padding: 12px 15px 12px 45px;
-    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
     border-radius: 25px;
-    font-size: 1rem;
-    color: #333;
-    background: #f9f9f9;
-  }
-  
-  .input-container input:focus {
     outline: none;
-    border-color: #6dd5ed;
-  }
-  
-  /* Button styling */
-  button {
+    background: #f3f7f9; /* Latar belakang abu-abu sangat muda */
+    padding-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #9ad1d4; /* Aqua pastel */
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(154, 209, 212, 0.5);
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #5d5d8f; /* Ungu pastel */
+}
+
+button {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Gradien aqua ke pink */
     border: none;
     border-radius: 25px;
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
-    font-size: 1rem;
-    color: #fff;
     cursor: pointer;
-    font-weight: bold;
-  }
-  
-  button:hover {
-    background: linear-gradient(to left, #6dd5ed, #2193b0);
-  }
-  
-  /* Social login link */
-  .social-login {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #f6c8dc, #9ad1d4); /* Gradien berlawanan */
+    box-shadow: 0 8px 16px rgba(246, 200, 220, 0.4);
+}
+
+p {
+    font-size: 14px;
     margin-top: 15px;
-  }
-  
-  .social-login span {
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  .social-login a {
-    color: #6dd5ed;
+    color: #444; /* Abu-abu gelap */
+}
+
+a {
+    color: #5d5d8f; /* Ungu pastel */
     text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .social-login a:hover {
+    font-weight: 600;
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
+}
+
+.error-message {
+    font-size: 12px;
+    color: #e63946; /* Merah pastel */
+    margin-top: 5px;
+    display: block;
+}

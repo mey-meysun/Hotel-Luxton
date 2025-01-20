@@ -24,3 +24,7 @@ Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/dashboard-user', function () {
+    return view('dashboard-user');
+});
