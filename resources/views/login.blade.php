@@ -17,6 +17,8 @@
     <!--Custom CSS-->
     {{-- <link rel="stylesheet" href="../css/style.css"> --}}
     <link href="{{ asset('assets/css/style1.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style3.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style1.css') }}" rel="stylesheet">
 
 </head>
 

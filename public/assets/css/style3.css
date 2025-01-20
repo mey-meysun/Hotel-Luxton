@@ -2,11 +2,8 @@
 
 :root{
     --white: #fff;
-    --black: #000;
-    --lightPink: #fcb6d0;
-    --pink: #ff6f91;
-    --darkPink: #ff4f78;
-    --deepPink: #d9165a;
+    --pink: #ff6f91; /* Replace black with pink */
+    --lightBulue: #0ef;
 }
 
 *{
@@ -21,7 +18,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--lightPink);
 }
 
 .wrapper{
@@ -29,9 +25,9 @@ body{
     width: 750px;
     height: 450px;
     background: var(--white);
-    border: 2px solid var(--deepPink);
+    border: 2px solid var(--pink); /* Replaced */
     border-radius: 10px;
-    box-shadow: 0 0 20px var(--darkPink);
+    box-shadow: 0 0 20px var(--pink); /* Replaced */
     overflow: hidden;
 }
 
@@ -54,7 +50,7 @@ body{
     margin-bottom: 10px;
     position: relative;
     font-size: 32px;
-    color: var(--deepPink);
+    color: var(--pink); /* Replaced */
     text-align: center;
 }
 
@@ -66,7 +62,7 @@ body{
     transform: translateX(-50%);
     width: 40px;
     height: 4px;
-    background: var(--deepPink);
+    background: var(--pink); /* Replaced */
 }
 
 .form-box .input-box{
@@ -80,19 +76,19 @@ body{
     width: 100%;
     height: 100%;
     background: transparent;
-    color: var(--black);
+    color: var(--pink); /* Replaced */
     font-size: 16px;
     font-weight: 500;
     border: none;
     outline: none;
-    border-bottom: 2px solid var(--deepPink);
+    border-bottom: 2px solid var(--pink); /* Replaced */
     transition: .5s;
     padding-right: 23px;
 }
 
 .input-box input:focus,
 .input-box input:valid{
-    border-bottom-color: var(--pink);
+    border-bottom-color: var(--lightBulue);
 }
 
 .input-box label{
@@ -101,7 +97,7 @@ body{
     left: 0;
     transform: translateY(-50%);
     font-size: 16px;
-    color: var(--black);
+    color: var(--pink); /* Replaced */
     pointer-events: none;
     transition: 0.5s;
 }
@@ -109,7 +105,7 @@ body{
 .input-box input:focus~label,
 .input-box input:valid~label{
     top: -5px;
-    color: var(--pink);
+    color: var(--lightBulue);
 }
 
 .input-box i{
@@ -123,13 +119,13 @@ body{
 
 .input-box input:focus~i,
 .input-box input:valid~i{
-    color: var(--pink);
+    color: var(--lightBulue);
 }
 
 form button{
     width: 100%;
     height: 45px;
-    background-color: var(--deepPink);
+    background-color: var(--pink); /* Replaced */
     color: var(--white);
     border: none;
     outline: none;
@@ -141,63 +137,20 @@ form button{
 }
 
 form button:hover{
-    box-shadow: 0 0 10px rgba(255, 79, 120, 0.8);
+    box-shadow: 0 0 10px rgba(255, 111, 145, 0.8); /* Updated */
 }
 
 form .linkTxt{
     font-size: 14px;
-    color: var(--black);
+    color: var(--pink); /* Replaced */
     text-align: center;
     margin: 20px 0 10px;
 }
 
 .linkTxt p a{
-    color: var(--pink);
+    color: blue;
     text-decoration: none;
     font-weight: 600;
-}
-
-.wrapper .form-box.login .animation{
-    transform: translateX(0);
-    transition: 0.7s ease;
-    opacity: 1;
-    filter: blur(0);
-    transition-delay: calc(.1s * var(--j));
-}
-
-.wrapper.active .form-box.login .animation{
-    transform: translateX(-120%);
-    opacity: 0;
-    filter: blur(10px);
-    transition-delay: calc(.1s * var(--i));
-}
-
-.wrapper .info-text{
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.wrapper .info-text.login{
-    right: 0;
-    text-align: right;
-    padding: 0 40px 60px 150px;
-}
-
-.wrapper .info-text h2{
-    font-size: 36px;
-    color: var(--white);
-    line-height: 1.3;
-    text-transform: uppercase;
-}
-
-.wrapper .info-text p{
-    font-size: 16px;
-    color: var(--white);
 }
 
 .wrapper .rotate-bg{
@@ -206,7 +159,7 @@ form .linkTxt{
     right: 0;
     width: 850px;
     height: 600px;
-    background: var(--darkPink);
+    background: var(--pink); /* Replaced */
     transform: rotate(10deg) skewY(40deg);
     transform-origin: bottom right;
     transition: 1.5s ease;
@@ -224,7 +177,7 @@ form .linkTxt{
     left: 250px;
     width: 850px;
     height: 700px;
-    background: var(--lightPink);
+    background: var(--white);
     transform: rotate(0) skewY(0);
     transform-origin: bottom left;
     transition: 1.5s ease;
