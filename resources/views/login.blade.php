@@ -15,7 +15,8 @@
     rel='stylesheet'>
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="../css/style.css">
+    {{-- <link rel="stylesheet" href="../css/style.css"> --}}
+    <link href="{{ asset('assets/css/style1.css') }}" rel="stylesheet">
 
 </head>
 
@@ -43,7 +44,7 @@
                 </div>
                 <button type="submit" class="btn animation" style="--i:3; --j:24">Login</button>
                 <div class="linkTxt animation" style="--i:5; --j:25">
-                    <p>Don't have an account? <a href="#" class="register-link">Sign Up</a></p>
+                    <p>Don't have an account? <a href="/register" class="register-link">Sign Up</a></p>
                 </div>
             </form>
         </div>
@@ -54,55 +55,9 @@
                 Deleniti,rem?</p>
         </div>
 
-
-
-
-
-
-
-        <div class="form-box register">
-
-            <h2 class="title animation" style="--i:17; --j:0">Sign Up</h2>
-
-            <form action="#">
-
-                <div class="input-box animation" style="--i:18; --j:1">
-                    <input type="text" required>
-                    <label for="">Username</label>
-                    <i class='bx bxs-user'></i>
-                </div>
-
-                <div class="input-box animation" style="--i:19; --j:2">
-                    <input type="email" required>
-                    <label for="">Email</label>
-                    <i class='bx bxs-envelope'></i>
-                </div>
-
-                <div class="input-box animation" style="--i:20; --j:3">
-                    <input type="password" required>
-                    <label for="">Password</label>
-                    <i class='bx bxs-lock-alt'></i>
-                </div>
-
-                <button type="submit" class="btn animation" style="--i:21;--j:4">Sign Up</button>
-
-                <div class="linkTxt animation" style="--i:22; --j:5">
-                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                </div>
-
-            </form>
-        </div>
-
-        <div class="info-text register" style="color: white;">
-            <h2 class="animation" style="--i:17; --j:0;">Welcome Back!</h2>
-            <p class="animation" style="--i:18; --j:1;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti,rem?</p>
-        </div>
-
-    </div>
-
     <!--Script.js-->
-    <script src="../js/script.js"></script>
+    {{-- <script src="../js/script.js"></script> --}}
+    <script src="{{ asset('assets/js.min.js') }}"></script>
 </body>
 
 </html> 
