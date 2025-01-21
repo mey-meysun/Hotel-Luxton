@@ -19,6 +19,12 @@
                 <div class="col-md-8">
                   <div class="site-hero-contents text-center" data-aos="fade-up">
                     <h1 class="hero-heading">LuxtonHotel by Untree.co</h1>
+                    {{-- <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+                      @csrf
+                      @method('DELETE')
+                      <button class="btn btn-danger" type="submit">Logout</button>
+                      </form> --}} 
+                      {{-- nitip dulu ya --}}
                     <div class="sub-text">
                       <p>Another free awesome templates for Hotels and any kind of website by <a href="https://untree.co/" target="_blank" class="text-white font-weight-bold">Untree.co</a>. See our <a href="https://untree.co/license/" class="text-white font-weight-bold">license page</a> for more usage details</p>
                     </div>
