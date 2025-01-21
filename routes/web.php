@@ -22,6 +22,8 @@ Route::get('/tipekamar', function () {
 
 Route::get('/register', function () {
     return view('register');
+});
+
 Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', [HomeController::class, 'index']);
 Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
