@@ -28,7 +28,7 @@
             </div>
           </div>
 
-          <div class="untree_co--site-hero overlay"  style="background-image: url('images/slider_1.jpg')">
+          <div class="untree_co--site-hero overlay"  style="background-image: url('public/images/slider_1.jpg')">
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7">

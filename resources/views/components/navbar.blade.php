@@ -23,7 +23,7 @@
           <ul class="site-nav-ul js-clone-nav">
             <li class="active"><a href="/home">Beranda</a></li>
             <li class="has-children">
-              <a href="rooms.html">Tipe Kamar</a>
+              <a href="/tipekamar">Tipe Kamar</a>
               <ul class="dropdown">
                 <li>
                   <a href="#">Standard</a>

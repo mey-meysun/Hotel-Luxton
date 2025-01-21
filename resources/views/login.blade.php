@@ -23,19 +23,14 @@
         <input type="password" id="password" placeholder="Password" required>
         <i class="fas fa-eye eye-icon" id="toggle-password"></i>
       </div>
-      <div class="remember-forgot">
-        <label>
-          <input type="checkbox"> Remember Me
-        </label>
-        <a href="#">Lupa Password?</a>
-      </div>
       <button type="submit">Login</button>
     </form>
     <div class="social-login">
-      <span>Atau login dengan:</span>
+      <p>Don't have an account? <a href="/login">Signup</a></p>
+      {{-- <span>Atau login dengan:</span>
       <i class="fab fa-facebook-f"></i>
       <i class="fab fa-google"></i>
-      <i class="fab fa-twitter"></i>
+      <i class="fab fa-twitter"></i> --}}
     </div>
   </div>
 
