@@ -21,3 +21,7 @@ Route::get('/register', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/dashboard-user', function () {
+    return view('dashboard-user');
+});
