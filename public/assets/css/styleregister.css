@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Kombinasi aqua dan pink pastel */
+    color: #444;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.form h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #5d5d8f; /* Warna ungu pastel */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    background: #f3f7f9; /* Latar belakang abu-abu sangat muda */
+    padding-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #9ad1d4; /* Aqua pastel */
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(154, 209, 212, 0.5);
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #5d5d8f; /* Ungu pastel */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Gradien aqua ke pink */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #f6c8dc, #9ad1d4); /* Gradien berlawanan */
+    box-shadow: 0 8px 16px rgba(246, 200, 220, 0.4);
+}
+
+p {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #444; /* Abu-abu gelap */
+}
+
+a {
+    color: #5d5d8f; /* Ungu pastel */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    font-size: 12px;
+    color: #e63946; /* Merah pastel */
+    margin-top: 5px;
+    display: block;
+}

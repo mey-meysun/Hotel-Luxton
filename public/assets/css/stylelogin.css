@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Kombinasi aqua dan pink pastel */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8); /* Warna putih dengan transparansi */
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 25px 20px;
+    width: 320px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    color: #444; /* Abu-abu gelap */
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5d5d8f; /* Ungu pastel */
+}
+
+.login-container .icon-container {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #5d5d8f; /* Ungu pastel */
+}
+
+.login-container input {
+    width: calc(100% - 40px);
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    background: #f3f7f9; /* Latar belakang abu-abu sangat muda */
+    font-size: 0.9rem;
+    color: #444; /* Abu-abu gelap */
+    position: relative;
+}
+
+.login-container input:focus {
+    border-color: #9ad1d4; /* Aqua pastel */
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(154, 209, 212, 0.5);
+}
+
+.login-container .input-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.login-container .input-container i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Gradien aqua ke pink */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: linear-gradient(135deg, #f6c8dc, #9ad1d4); /* Gradien berlawanan */
+    box-shadow: 0 8px 16px rgba(246, 200, 220, 0.4);
+}
+
+.login-container .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+.login-container .remember-forgot a {
+    color: #5d5d8f; /* Ungu pastel */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-container .remember-forgot input {
+    margin-right: 5px;
+}
+
+.login-container .social-login {
+    margin-top: 20px;
+}
+
+.login-container .social-login i {
+    font-size: 1.3rem;
+    margin: 0 8px;
+    color: #5d5d8f; /* Ungu pastel */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container .social-login i:hover {
+    color: #9ad1d4; /* Aqua pastel */
+}
+
+/* CSS tambahan untuk password visibility */
+.login-container .input-container i.eye-icon {
+    right: 15px;
+    left: unset;
+    cursor: pointer;
+    color: #888;
+    font-size: 1.2rem;
+}

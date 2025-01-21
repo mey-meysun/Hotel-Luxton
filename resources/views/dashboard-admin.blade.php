@@ -8,55 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Tambahkan Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            background-color: #f0f2f5;
-            font-family: 'Arial', sans-serif;
-        }
-        .sidebar {
-            height: 100vh;
-            background-color: #212529;
-            color: white;
-            padding: 20px;
-            position: fixed;
-            width: 250px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar h2 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-weight: bold;
-        }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin: 15px 0;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        .sidebar a:hover {
-            background-color: #495057;
-        }
-        .content {
-            margin-left: 270px;
-            padding: 20px;
-        }
-        .card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: none;
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.02);
-        }
-        .table thead {
-            background-color: #343a40;
-            color: white;
-        }
-    </style>
+    <!-- Link ke file CSS eksternal -->
+    {{-- <link rel="stylesheet" href="styles.css"> --}}
+    <link href="{{ asset('assets/css/style4.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
@@ -142,12 +96,28 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Laporan Bulanan</h5>
-                        <p class="card-text fs-5">Jumlah kamar dengan status "Selesai": 25</p>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="card-text fs-5">Jumlah kamar dengan status <strong>"Selesai"</strong>: <span class="badge bg-success">25</span></p>
+                                <p class="card-text fs-5">Jumlah kamar <strong>terisi</strong>: <span class="badge bg-danger">10</span></p>
+                                <p class="card-text fs-5">Jumlah kamar dalam <strong>perbaikan</strong>: <span class="badge bg-warning">5</span></p>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <!-- Grafik batang untuk menampilkan laporan -->
+                                <div class="bar-chart-container">
+                                    <div class="bar" style="height: 60%; background-color: #28a745;"></div>
+                                    <div class="bar" style="height: 40%; background-color: #dc3545;"></div>
+                                    <div class="bar" style="height: 30%; background-color: #ffc107;"></div>
+                                </div>
+                                <small class="text-center mt-2">Status Kamar</small>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-primary">Lihat Detail</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div>            
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
