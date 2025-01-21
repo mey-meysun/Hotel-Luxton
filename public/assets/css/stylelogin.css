@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* Warna gradien */
+  }
+  
+  .login-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 25px 20px;
+    width: 320px; /* Ukuran container */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .login-container .icon-container {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .login-container input {
+    width: calc(100% - 40px); /* Lebar sesuai container */
+    padding: 10px 15px; /* Padding lebih kecil */
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem; /* Ukuran font */
+    position: relative;
+  }
+  
+  .login-container input:focus {
+    box-shadow: 0 0 8px rgba(116, 235, 213, 0.8);
+  }
+  
+  .login-container .input-container {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .login-container .input-container i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.2rem;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+  }
+  
+  .login-container button:hover {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  }
+  
+  .login-container .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 0.85rem;
+  }
+  
+  .login-container .remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .login-container .remember-forgot input {
+    margin-right: 5px;
+  }
+  
+  .login-container .social-login {
+    margin-top: 20px;
+  }
+  
+  .login-container .social-login i {
+    font-size: 1.3rem;
+    margin: 0 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-container .social-login i:hover {
+    color: #6dd5ed;
+  }
+  
