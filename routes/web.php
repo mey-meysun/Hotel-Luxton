@@ -22,6 +22,4 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/kamar', function () {
-    return view('kamar');
-});
+
