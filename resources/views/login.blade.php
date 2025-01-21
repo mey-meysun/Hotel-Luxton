@@ -6,7 +6,6 @@
   <title>Halaman Login</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="{{ asset('assets/css/stylelogin.css') }}" rel="stylesheet">
-  
 </head>
 <body>
   <div class="login-container">
@@ -17,11 +16,12 @@
     <form>
       <div class="input-container">
         <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Em" required>
+        <input type="text" placeholder="Username" required>
       </div>
       <div class="input-container">
         <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <i class="fas fa-eye eye-icon" id="toggle-password"></i>
       </div>
       <div class="remember-forgot">
         <label>
@@ -38,5 +38,8 @@
       <i class="fab fa-twitter"></i>
     </div>
   </div>
+
+  <script src="{{ asset('assets/js/login.js') }}"></script> <!-- Memanggil file JS terpisah -->
 </body>
 </html>
+
