@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    function register()
+    public function register()
     {
         return view('register');
     }
@@ -32,14 +32,18 @@ class AuthController extends Controller
     }
     public function loginPost(Request $request)
     {
-        $credetials = [
-            'username' => $request->username,
-            'password' => $request->password,
-        ];
-        if (Auth::attempt($credetials)) {
-            return redirect('/home')->with('success', 'Login berhasil');
+
+        $credentials = $request->only('username', 'password');
+
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+
+            if ($user->role == 'admin') {
+                return redirect('/admin/dashboard')->with('success', 'Login Admin Berhasil');
+            }
+            return redirect('/home')->with('success', 'Login Berhasil');
         }
-        return back()->with('error', 'Username or Password salah');
+        return back()->with('error', 'Username atau Password salah');
     }
 
     public function logout()
