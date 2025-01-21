@@ -55,7 +55,7 @@
         <!-- Sudah punya akun -->
         <div class="social-login">
             <span>Sudah punya akun?
-                <a href="index.html" style="color: #6dd5ed; text-decoration: none;">
+                <a href="/login" style="color: #6dd5ed; text-decoration: none;">
                     Login di sini
                 </a>
             </span>
