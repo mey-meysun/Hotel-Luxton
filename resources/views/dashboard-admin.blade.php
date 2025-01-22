@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Link ke file CSS eksternal -->
     {{-- <link rel="stylesheet" href="styles.css"> --}}
-    <link href="{{ asset('assets/css/style4.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/styledashboard.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
