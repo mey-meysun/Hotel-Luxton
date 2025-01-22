@@ -1,10 +1,10 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6dd5ed, #cc99ff);
-    color: #333;
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Aqua dan pink pastel */
+    color: #444;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,10 +12,11 @@ body {
 }
 
 .login-container {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 30px;
+    background: rgba(255, 255, 255, 0.85); /* Warna putih dengan transparansi */
+    backdrop-filter: blur(15px); /* Efek blur di belakang */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px 25px;
     width: 100%;
     max-width: 400px;
     text-align: center;
@@ -24,13 +25,13 @@ body {
 
 .icon-container {
     font-size: 48px;
-    color: #6dd5ed;
+    color: #5d5d8f; /* Ungu pastel */
     margin-bottom: 15px;
 }
 
 h2 {
     font-size: 24px;
-    color: #555;
+    color: #5d5d8f; /* Ungu pastel */
     margin-bottom: 20px;
 }
 
@@ -42,39 +43,46 @@ h2 {
 .input-container i {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 15px;
     transform: translateY(-50%);
     color: #888;
 }
 
 .input-container input {
     width: 100%;
-    padding: 10px 10px 10px 40px;
+    padding: 12px 15px 12px 40px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 25px;
     outline: none;
-    transition: all 0.3s;
+    font-size: 1rem;
+    color: #333;
+    background: #f7fafc;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Pastikan padding dan border dihitung dalam lebar elemen */
 }
 
 .input-container input:focus {
-    border-color: #6dd5ed;
-    box-shadow: 0 0 5px rgba(109, 213, 237, 0.5);
+    border-color: #9ad1d4; /* Aqua pastel */
+    box-shadow: 0 0 8px rgba(154, 209, 212, 0.6);
+    background: #ffffff;
 }
 
 button {
-    background: linear-gradient(135deg, #6dd5ed, #cc99ff);
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Gradien aqua ke pink pastel */
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
+    border-radius: 25px;
+    padding: 12px 15px;
+    font-size: 1.1rem;
     cursor: pointer;
     width: 100%;
-    transition: background 0.3s;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #56c6e6, #b988fc);
+    background: linear-gradient(135deg, #f6c8dc, #9ad1d4); /* Gradien berlawanan */
+    box-shadow: 0 8px 20px rgba(246, 200, 220, 0.4);
+    transform: translateY(-2px);
 }
 
 .social-login {
@@ -85,13 +93,13 @@ button:hover {
 
 .social-login a {
     font-weight: bold;
-    color: #6dd5ed;
+    color: #5d5d8f; /* Ungu pastel */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .social-login a:hover {
-    color: #55bfe6;
+    color: #9ad1d4; /* Aqua pastel */
 }
 
 .alert {
