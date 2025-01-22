@@ -29,3 +29,5 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::get('/dashboard-user', function () {
     return view('dashboard-user');
 });
+
+
