@@ -17,7 +17,7 @@
       <link href="{{ asset('assets/css/vendor/bootstrap.css') }}" rel="stylesheet">
   
       <!-- Theme Style -->
-      <link href="assets/css/style.css" rel="stylesheet">
+      <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
   
       <title>LuxtonHotel | Enjoy Your Stay</title>
     </head>
@@ -43,5 +43,5 @@
     <script src="{{ asset('assets/js/vendor/debug.addIndicators.min.js') }}"></script>
 
 
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
     </html>
