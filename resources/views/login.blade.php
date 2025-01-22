@@ -35,10 +35,6 @@
         </form>
         <div class="social-login">
             <p>Don't have an account? <a href="/register">Signup</a></p>
-            {{-- <span>Atau login dengan:</span>
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-google"></i>
-      <i class="fab fa-twitter"></i> --}}
         </div>
     </div>
 

@@ -17,10 +17,6 @@ Route::get('/tipekamar', function () {
     return view('tipekamar');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
-
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [HomeController::class, 'index']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
