@@ -1,113 +1,80 @@
 <x-layout>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <div class="untree_co--site-section">
+    <div class="container">
+      <div class="container pt-0 pb-5">
+      <div class="row justify-content-center text-center">  
+        <div class="col-lg-6 section-heading" data-aos="fade-up">
+          <h3 class="text-center">Fasilitas Hotel</h3>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="kolam-renang-2.jpg" class="d-block w-100" alt="">
-          </div>
-          <div class="carousel-item">
-            <img src="kolam-renang-1.jp" class="d-block w-100" alt="">
-          </div>
-          <div class="carousel-item">
-            <img src="{{url('/asset/images/kolam-renang.jpg') }}" class="d-block w-100" alt="">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+    </div>
+      <div class="row custom-row-02192 align-items-stretch">
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+              <img src="{{ asset('assets/images/svg/parking.svg') }}" alt="Image" class="img-fluid">
+            </div>
+            <h3>Free Self-Parking</h3>
+            <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
+            <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+              <img src="{{ asset('assets/images/svg/internet.svg') }}" alt="Image" class="img-fluid">
+            </div>
+            <h3>High speed Internet access</h3>
+            <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
+            <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+              <img src="{{ asset('assets/images/svg/wifi.svg') }}" alt="Image" class="img-fluid">
+            </div>
+            <h3>Complimentary WiFi in public areas</h3>
+            <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
+            <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+              <img src="{{ asset('assets/images/svg/elevator.svg') }}" alt="Image" class="img-fluid">
+            </div>
+            <h3>Elevators</h3>
+            <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
+            <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+              <img src="{{ asset('assets/images/svg/partners.svg') }}" alt="Image" class="img-fluid">
+            </div>
 
-       <div class="grid grid-cols-3 gap-3 px-4">
-        <div class="card" >
-          <img src="/asset/images/kolam-renang.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Kolam renang</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h3>Meeting rooms</h3>
+            <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
+            <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
           </div>
         </div>
-        <div class="card" >
-          <img src="kolam-renang-1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Gym</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+              <img src="{{ asset('assets/images/svg/washing-machine.svg') }}" alt="Image" class="img-fluid">
+            </div>
+            <h3>Laundry and Valet service</h3>
+            <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
+            <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
           </div>
         </div>
-        <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Restoran</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Ruang Metting</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Playground</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Spa</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Tempat Ibadah</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Gedung Serba Guna</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-sky-700">Lapangan Olahraga</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div> 
-    </body>
-    </html>
+
+      </div>
+    </div>
+  </div>
 </x-layout>

@@ -122,12 +122,12 @@ $(function() {
 
 		// // click outisde offcanvas
 		// $(document).mouseup(function(e) {
-	 //    var container = $(".untree_co--site-mobile-menu");
-	 //    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	 //      if ( $('body').hasClass('offcanvas') ) {
+	    // var container = $(".untree_co--site-mobile-menu");
+	    // if (!container.is(e.target) && container.has(e.target).length === 0) {
+	    //   if ( $('body').hasClass('offcanvas') ) {
 		// 			$('body').removeClass('offcanvas');
 		// 		}
-	 //    }
+	    // }
 		// });
 	}; 
 	siteMenuClone();
