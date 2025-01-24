@@ -15,7 +15,7 @@
     <section id="superior">
         <div class="card border-0" style="display: flex; align-items: center; width: 100rem; margin: 0 1rem; ">
             <div class="login-box p-4 shadow">
-              <img src="{{ assets('images/room1.webp') }}" class="card-img-top rounded float-start" style="width: 250px; height: auto" alt="Superior Room">
+              <img src="{{ asset('assets/images/room1.webp') }}"" class="card-img-top rounded float-start" style="width: 250px; height: auto" alt="Superior Room">
                <!-- Product details-->
                <div class="card-body p-4">
                 <p class="text-center">Kamar 1<b></b></p>
