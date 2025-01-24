@@ -21,7 +21,7 @@
         </div>
         <div class="site-nav-ul-wrap text-center d-none d-lg-block">
           <ul class="site-nav-ul js-clone-nav">
-            <li class="active"><a href="/home">Beranda</a></li>
+            <li class="active"><a href="/">Beranda</a></li>
             <li class="has-children">
               <a href="/tipekamar">Tipe Kamar</a>
               <ul class="dropdown">
