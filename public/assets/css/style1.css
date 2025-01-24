@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Aqua dan pink pastel */
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.85); /* Warna putih dengan transparansi */
+    backdrop-filter: blur(15px); /* Efek blur di belakang */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.icon-container {
+    font-size: 48px;
+    color: #5d5d8f; /* Ungu pastel */
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #5d5d8f; /* Ungu pastel */
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    background: #f7fafc;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Pastikan padding dan border dihitung dalam lebar elemen */
+}
+
+.input-container input:focus {
+    border-color: #9ad1d4; /* Aqua pastel */
+    box-shadow: 0 0 8px rgba(154, 209, 212, 0.6);
+    background: #ffffff;
+}
+
+button {
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Gradien aqua ke pink pastel */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #f6c8dc, #9ad1d4); /* Gradien berlawanan */
+    box-shadow: 0 8px 20px rgba(246, 200, 220, 0.4);
+    transform: translateY(-2px);
+}
+
+.social-login {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.social-login a {
+    font-weight: bold;
+    color: #5d5d8f; /* Ungu pastel */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-login a:hover {
+    color: #9ad1d4; /* Aqua pastel */
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

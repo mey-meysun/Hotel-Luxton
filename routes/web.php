@@ -33,3 +33,7 @@ Route::middleware(['auth', 'customer'])->group(function () {
     Route::get('user/dashboard', [HomeController::class, 'customer']);
 });
 
+Route::get('/fasilitas', function () {
+    return view('fasilitas');
+});
+
