@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
-class AdminMiddleware
+class CustomerMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,9 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->role === 'admin') {
+        if (Auth::check() && Auth::user()->role === 'customer') {
             return $next($request);
         }
-        return redirect('/')->with('error', 'Akses ditolak!');
+        return redirect('/admin/dashboard')->with('error', 'Akses ditolak!');
     }
 }
