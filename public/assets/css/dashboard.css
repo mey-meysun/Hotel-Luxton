@@ -1,0 +1,130 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 700;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Table Styling */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: #e9ecef;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f3f5;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+.badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+/* Buttons */
+.btn-danger {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 5px 12px;
+    background-color: #dc3545;
+    border: none;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #bd2130;
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 5px 12px;
+    color: #6c757d;
+    background-color: #e9ecef;
+    border: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .card-header {
+        font-size: 16px;
+    }
+
+    .btn-danger,
+    .btn-secondary {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
