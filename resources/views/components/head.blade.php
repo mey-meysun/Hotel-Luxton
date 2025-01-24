@@ -18,6 +18,7 @@
   
       <!-- Theme Style -->
       <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
   
       <title>LuxtonHotel | Enjoy Your Stay</title>
     </head>
