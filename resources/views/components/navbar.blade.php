@@ -40,25 +40,14 @@
               </ul>
             </li>
             <li><a href="/fasilitas">Fasilitas</a></li>
-            <li><a href="about.html">Tentang</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">Booking</a></li>
+            <li><a href="gallery.html">Ulasan</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="icons-wrap text-md-right">
-
-          <ul class="icons-top d-none d-lg-block">
-            <li class="mr-4">
-              <a href="#" class="js-search-toggle"><span class="icon-search2"></span></a>
-            </li>
             <li>
-              <a href="#"><span class="icon-facebook"></span></a>
-            </li>
-            <li>
-              <a href="#"><span class="icon-twitter"></span></a>
-            </li>
-            <li>
-              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="/profil"><i class="bi bi-person-circle"></i></a>
             </li>
           </ul>
 

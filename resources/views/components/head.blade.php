@@ -43,6 +43,5 @@
     <script src="{{ asset('assets/js/vendor/scrollmagic.animation.gsap.min.js') }}"></script>
     <script src="{{ asset('assets/js/vendor/debug.addIndicators.min.js') }}"></script>
 
-
     <script src="{{ asset('assets/js/main.js') }}"></script>
     </html>
