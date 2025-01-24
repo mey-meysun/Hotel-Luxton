@@ -41,7 +41,8 @@ class AuthController extends Controller
             if ($user->role == 'admin') {
                 return redirect('/admin/dashboard')->with('success', 'Login Admin Berhasil');
             }
-            return redirect('/')->with('success', 'Login Berhasil');
+            return redirect('/user/dashboard')->with('success', 'Login Berhasil');
+
         }
         return back()->with('error', 'Username atau Password salah');
     }
@@ -50,5 +51,10 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect()->route('login');
+    }
+
+    public function customer()
+    {
+        return view('dashboard-user');
     }
 }
