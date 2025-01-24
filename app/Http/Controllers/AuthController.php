@@ -41,7 +41,7 @@ class AuthController extends Controller
             if ($user->role == 'admin') {
                 return redirect('/admin/dashboard')->with('success', 'Login Admin Berhasil');
             }
-            return redirect('/home')->with('success', 'Login Berhasil');
+            return redirect('/')->with('success', 'Login Berhasil');
         }
         return back()->with('error', 'Username atau Password salah');
     }

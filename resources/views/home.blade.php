@@ -13,7 +13,7 @@
         
         <div class="owl-carousel owl-hero">
 
-          <div class="untree_co--site-hero overlay" style="background-image: url('images/slider_2.jpg')">
+          <div class="untree_co--site-hero overlay" style="background-image: url({{ asset('assets/images/slider_2.jpg') }}">
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-8">
@@ -46,7 +46,7 @@
             </div>
           </div>
 
-          <div class="untree_co--site-hero overlay" style="background-image: url('images/room_1_a.jpg')">
+          <div class="untree_co--site-hero overlay" style="background-image: url({{ asset('assets/images/room_1_a.jpg') }}  'images/room_1_a.jpg')">
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-10">
@@ -77,11 +77,11 @@
                 <div class="image-stack">
                   <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                     <div class="overlay"></div>
-                    <img src="images/room_1_a.jpg" alt="Image" class="img-fluid pic1">
+                    <img src="{{ asset('assets/images/room_1_a.jpg') }}" alt="Image" class="img-fluid pic1">
                   </div>
                   <div class="image-stack-item image-stack-item-bottom">
                     <div class="overlay"></div>
-                    <img src="images/room_1_b.jpg" alt="Image" class="img-fluid pic2">
+                    <img src="{{ asset('assets/images/room_1_b.jpg') }}" alt="Image" class="img-fluid pic2">
                   </div>
                 </div>
               </div> <!-- .suite -->
@@ -101,11 +101,11 @@
                 <div class="image-stack">
                   <div class="image-stack-item image-stack-item-top">
                     <div class="overlay"></div>
-                    <img src="images/room_2_a.jpg" alt="Image" class="img-fluid pic1">
+                    <img src="{{ asset('assets/images/room_2_a.jpg') }}" alt="Image" class="img-fluid pic1">
                   </div>
                   <div class="image-stack-item image-stack-item-bottom" data-jarallax-element="-50">
                     <div class="overlay"></div>
-                    <img src="images/room_2_b.jpg" alt="Image" class="img-fluid pic2">
+                    <img src="{{ asset('assets/images/room_2_b.jpg') }}" alt="Image" class="img-fluid pic2">
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                 <div class="media-29191 text-center h-100">
                   <div class="media-29191-icon">
-                    <img src="images/svg/parking.svg" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/images/svg/parking.svg') }}" alt="Image" class="img-fluid">
                   </div>
                   <h3>Free Self-Parking</h3>
                   <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
@@ -147,7 +147,7 @@
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
                 <div class="media-29191 text-center h-100">
                   <div class="media-29191-icon">
-                    <img src="images/svg/internet.svg" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/images/svg/internet.svg') }}" alt="Image" class="img-fluid">
                   </div>
                   <h3>High speed Internet access</h3>
                   <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
@@ -157,7 +157,7 @@
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                 <div class="media-29191 text-center h-100">
                   <div class="media-29191-icon">
-                    <img src="images/svg/wifi.svg" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/images/svg/wifi.svg') }}" alt="Image" class="img-fluid">
                   </div>
                   <h3>Complimentary WiFi in public areas</h3>
                   <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
@@ -168,7 +168,7 @@
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
                 <div class="media-29191 text-center h-100">
                   <div class="media-29191-icon">
-                    <img src="images/svg/elevator.svg" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/images/svg/elevator.svg') }}" alt="Image" class="img-fluid">
                   </div>
                   <h3>Elevators</h3>
                   <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
@@ -179,7 +179,7 @@
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                 <div class="media-29191 text-center h-100">
                   <div class="media-29191-icon">
-                    <img src="images/svg/partners.svg" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/images/svg/partners.svg') }}" alt="Image" class="img-fluid">
                   </div>
 
                   <h3>Meeting rooms</h3>
@@ -190,7 +190,7 @@
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
                 <div class="media-29191 text-center h-100">
                   <div class="media-29191-icon">
-                    <img src="images/svg/washing-machine.svg" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/images/svg/washing-machine.svg') }}" alt="Image" class="img-fluid">
                   </div>
                   <h3>Laundry and Valet service</h3>
                   <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
@@ -226,7 +226,7 @@
 
               <div class="col-md-4">
                 <div class="post-entry" data-aos="fade-up" data-aos-delay="200">
-                  <a href="#" class="thumb"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+                  <a href="#" class="thumb"><img src="{{ asset('assets/images/img_3.jpg') }}" alt="Image" class="img-fluid"></a>
                   <div class="post-entry-contents">
                     <h3><a href="#">How algorithms shape our world</a></h3>
                     <div class="date">December 20, 2019 &bullet; by <a href="#">Joefrey Mahusay</a></div>
