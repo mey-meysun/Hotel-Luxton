@@ -21,7 +21,7 @@
         </div>
         <div class="site-nav-ul-wrap text-center d-none d-lg-block">
           <ul class="site-nav-ul js-clone-nav">
-            <li class="active"><a href="/home">Beranda</a></li>
+            <li class="active"><a href="/">Beranda</a></li>
             <li class="has-children">
               <a href="/tipekamar">Tipe Kamar</a>
               <ul class="dropdown">
@@ -39,7 +39,7 @@
                   </li>
               </ul>
             </li>
-            <li><a href="amenities.html">Fasilitas</a></li>
+            <li><a href="/fasilitas">Fasilitas</a></li>
             <li><a href="about.html">Tentang</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>

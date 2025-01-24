@@ -24,14 +24,6 @@
             <img src="{{url('/asset/images/kolam-renang.jpg') }}" class="d-block w-100" alt="">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
 
        <div class="grid grid-cols-3 gap-3 px-4">
@@ -63,7 +55,7 @@
           <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Ruang Metting</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example tixt to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
@@ -79,6 +71,30 @@
           <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Spa</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" >
+          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-sky-700">Tempat Ibadah</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" >
+          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-sky-700">Gedung Serba Guna</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" >
+          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-sky-700">Lapangan Olahraga</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
