@@ -6,40 +6,7 @@
             <div class="row align-items-center justify-content-center">
               <div class="col-md-8">
                 <div class="site-hero-contents text-center" data-aos="fade-up">
-                  <h1 class="hero-heading">LuxtonHotel by Untree.co</h1>
-                  <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Logout</button>
-                    </form>
-                    {{-- nitip dulu ya --}}
-                  <div class="sub-text">
-                    <p>Another free awesome templates for Hotels and any kind of website by <a href="https://untree.co/" target="_blank" class="text-white font-weight-bold">Untree.co</a>. See our <a href="https://untree.co/license/" class="text-white font-weight-bold">license page</a> for more usage details</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="untree_co--site-hero overlay"  style="background-image: url('public/images/slider_1.jpg')">
-          <div class="container">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-7">
-                <div class="site-hero-contents text-center" data-aos="fade-up">
-                  <h1 class="hero-heading">Enjoy Your Stay</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="untree_co--site-hero overlay" style="background-image: url({{ asset('assets/images/room_1_a.jpg') }}  'images/room_1_a.jpg')">
-          <div class="container">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-10">
-                <div class="site-hero-contents text-center" data-aos="fade-up">
-                  <h1 class="hero-heading">Away from the Hustle and Bustle of City Life</h1>
+                  <h2 class="hero-heading">Tipe Kamar Yang Bisa Anda Pilih</h1>
                 </div>
               </div>
             </div>
