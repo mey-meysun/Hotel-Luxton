@@ -6,7 +6,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7">
             <div class="site-hero-contents text-center" data-aos="fade-up">
-              <h1 class="hero-heading ">Fasilitas LuxtonHotel</h1>
+              <h1 class="hero-heading">Fasilitas LuxtonHotel</h1>
             </div>
           </div>
         </div>
