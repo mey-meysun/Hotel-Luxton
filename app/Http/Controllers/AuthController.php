@@ -41,7 +41,7 @@ class AuthController extends Controller
             if ($user->role == 'admin') {
                 return redirect('/admin/dashboard')->with('success', 'Login Admin Berhasil');
             }
-            return redirect('/user/dashboard')->with('success', 'Login Berhasil');
+            return redirect('/profil')->with('success', 'Login Berhasil');
 
         }
         return back()->with('error', 'Username atau Password salah');
@@ -56,5 +56,10 @@ class AuthController extends Controller
     public function customer()
     {
         return view('dashboard-user');
+    }
+
+    public function profil()
+    {
+        return view('profil');
     }
 }
