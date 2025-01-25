@@ -13,4 +13,8 @@ class HomeController extends Controller
     public function customer(){
         return view('dashboard-user');
     }
+
+    public function profil(){
+        return view('profil');
+    }
 }

@@ -20,13 +20,15 @@
             <!-- Bagian Foto dan Tombol -->
             <div class="col-md-4 text-center">
                 <img src="{{ asset('assets/images/p.jpg') }}" class="img-fluid rounded-circle border shadow-sm" style="width: 180px; height: 180px; object-fit: cover;">
-                <div class="mt-3">
+                <div class="mt-3 d-flex gap-3 px-3">
                     <a href="profiledit.php">
                         <button class="btn btn-sm btn-info text-white">Edit Profile</button>
                     </a>
-                    <a href="login.php">
+                    <form action="{{ route('logout') }}" method="POST" role="search">
+                        @csrf
+                        @method('DELETE')
                         <button class="btn btn-sm btn-warning text-white">Logout</button>
-                    </a>
+                    </form>
                 </div>
             </div>
 
