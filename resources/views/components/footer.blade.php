@@ -17,7 +17,6 @@
                 <li><a href="/fasilitas">Fasilitas</a></li>
                 <li><a href="/booking">Pesan Kamar</a></li>
                 <li><a href="#">Ulasan</a></li>
-                <li><a href="#">Tentang Kami</a></li>
               </ul>
             </div>
             <div class="col-md-9 ml-auto">
