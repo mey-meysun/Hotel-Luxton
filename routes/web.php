@@ -7,11 +7,11 @@ use App\Http\Controllers\AdminController;
 
 // untuk yg belum login
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/register', [AuthController::class, 'register']);
-    Route::post('/register', [AuthController::class, 'registerPost']);
+    Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/register', [AuthController::class, 'registerPost'])->name(name: 'register.post');
 
     Route::get('/login', [AuthController::class, 'login'])->name('login');
-    Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
+    Route::post('/login', [AuthController::class, 'loginPost'])->name('login.post');
 });
 
 // untuk publik
