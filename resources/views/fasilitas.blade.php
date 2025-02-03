@@ -31,15 +31,15 @@
           </div>
         </div>
         <div class="card" >
-          <img src="{{ asset('assets/images/kolam-renang-1.jpg') }}" class="card-img-top" alt="...">
+          <img src="{{ asset('assets/images/restoran.jpeg') }}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="{{ asset('assets/images/restoran.jpeg') }}">Restoran</h5>
+            <h5 class="">Restoran</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
         <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('assets/images/ruang-metting.jpg') }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Ruang Metting</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -47,7 +47,7 @@
           </div>
         </div>
         <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('assets/images/playground.jpg') }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Playground</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('assets/images/spa.jpeg') }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Spa</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('assets/images/tempat-ibadah.jpeg') }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Tempat Ibadah</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -71,7 +71,7 @@
           </div>
         </div>
         <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('assets/images/Gedung-Pernikahan.jpg') }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Gedung Serba Guna</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div class="card" >
-          <img src="kolam-renang-2.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('assets/images/lapangan olahraga.webp') }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-sky-700">Lapangan Olahraga</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
