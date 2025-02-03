@@ -17,7 +17,7 @@
                 <li><a href="/fasilitas">Fasilitas</a></li>
                 <li><a href="/booking">Pesan Kamar</a></li>
                 <li><a href="#">Ulasan</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Tentang Kami</a></li>
               </ul>
             </div>
             <div class="col-md-9 ml-auto">
@@ -54,9 +54,6 @@
           </li>
           <li>
             <a href="#"><span class="icon-instagram"></span></a>
-          </li>
-          <li>
-            <a href="#"><span class="icon-tripadvisor"></span></a>
           </li>
         </ul>
 
