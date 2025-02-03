@@ -13,7 +13,7 @@
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </head>
 
-    <body style="background-color: #f7f7f7; padding-top: 50px;">
+    <body style="background-color: #fdfcfc; padding-top: 50px;">
         <div class="loader">
             <div class="spinner-border text-primary" role="status">
                 <span class="sr-only">Loading...</span>

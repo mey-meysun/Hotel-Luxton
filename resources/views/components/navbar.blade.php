@@ -30,7 +30,7 @@
                       </ul>
                   </li>
                   <li><a href="/fasilitas">Fasilitas</a></li>
-                  <li><a href="about.html">Booking</a></li>
+                  <li><a href="about.html">Pesan Kamar</a></li>
                   <li><a href="gallery.html">Ulasan</a></li>
                   <li><a href="contact.html">Contact</a></li>
               </ul>
