@@ -40,7 +40,7 @@
       <div class="row mt-5 pt-5 align-items-center">
         <div class="col-md-6 text-md-left">
           <p>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="index.html">Untree.co</a>. All Rights Reserved. Design by <a href="https://untree.co/" target="_blank" class="text-primary">Untree.co</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="index.html">Untree.co</a>. All Rights Reserved
           </p>
           </div>
         <div class="col-md-6 text-md-right">
