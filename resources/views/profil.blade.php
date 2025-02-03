@@ -1,24 +1,14 @@
 <x-layout>
-    <!DOCTYPE html>
-    <html lang="en">
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <!-- Boxicons -->
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </head>
 
-    <body style="background-color: #fdfcfc; padding-top: 50px;">
-        <div class="loader">
-            <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
+    <body>
         <div class="container mt-5 pt-5 mb-5">
             <div class="row col-lg-8 mx-auto p-3 shadow-lg profile-card">
                 <!-- Bagian Foto dan Tombol -->
