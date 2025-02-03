@@ -15,6 +15,7 @@
       <link href="{{ asset('assets/css/vendor/aos.css') }}" rel="stylesheet">
       <link href="{{ asset('assets/css/vendor/animate.min.css') }}" rel="stylesheet">
       <link href="{{ asset('assets/css/vendor/bootstrap.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   
       <!-- Theme Style -->
       <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
