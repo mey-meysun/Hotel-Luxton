@@ -60,8 +60,37 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <div class="untree_co--site-section float-left pb-0 featured-rooms">
+
+                <div class="container pt-0 pb-5">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-6 section-heading" data-aos="fade-up">
+                            <h3 class="text-center">Modern, Luxton Hotel in Cirebon</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center">
+                <table width="60%">
+                    <tr>
+                        <td align="center">
+                            <p style="font-family: Georgia, serif; font-size: 16px; line-height: 1.6;">
+                                Hotel Luxton Cirebon is a modern hotel located in the heart of Cirebon, offering comfort and luxury with a range of premium facilities. 
+                                Known for its elegant design, this hotel provides an exceptional stay, ideal for both business trips and leisure. Enjoy various amenities such as an outdoor swimming pool, spa,
+                                as well as restaurants and bars with stunning city views, ensuring a delightful experience during your stay.
+                            </p>
+                            <p style="font-family: Georgia, serif; font-size: 16px; line-height: 1.6;">
+                                Hotel Luxton Cirebon is also the perfect venue for meetings and events, with facilities tailored to meet every need. The hotel offers a convenient shuttle service to the nearby Cirebon Train Station, 
+                                making your travel easier. With top-notch service in an elegant setting, Hotel Luxton Cirebon is the perfect choice for a fulfilling stay. Welcome to Luxton Hotel Cirebon.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
 
             <div class="untree_co--site-section float-left pb-0 featured-rooms">
 
