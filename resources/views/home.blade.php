@@ -250,7 +250,7 @@
                     
                     
 
-                    {{-- <div class="row custom-row-02192 align-items-stretch">
+                     <div class="row custom-row-02192 align-items-stretch">
                         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                             <div class="media-29191 text-center h-100">
                                 <div class="media-29191-icon">
