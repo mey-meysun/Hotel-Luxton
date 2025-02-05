@@ -60,8 +60,40 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <div class="untree_co--site-section float-left pb-0 featured-rooms">
+
+                <div class="container pt-0 pb-5">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-6 section-heading" data-aos="fade-up">
+                            <h3 class="text-center">Modern, Luxton Hotel in Cirebon</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div align="center">
+                <table width="60%">
+                    <tr>
+                        <td align="center">
+                            <p style="font-family: Georgia, serif; font-size: 16px; line-height: 1.6;">
+                                Hotel Luxton Cirebon is a modern hotel located in the heart of Cirebon, offering comfort and luxury with a range of premium facilities. 
+                                Known for its elegant design, this hotel provides an exceptional stay, ideal for both business trips and leisure. 
+                                Enjoy various amenities such as an outdoor swimming pool, spa,
+                                as well as restaurants and bars with stunning city views, ensuring a delightful experience during your stay.
+                            </p>
+                            <p style="font-family: Georgia, serif; font-size: 16px; line-height: 1.6;">
+                                Hotel Luxton Cirebon is also the perfect venue for meetings and events, with facilities tailored to meet every need. 
+                                The hotel offers a convenient shuttle service to the nearby Cirebon Train Station, 
+                                making your travel easier. With top-notch service in an elegant setting, Hotel Luxton Cirebon is the perfect choice for a fulfilling stay.
+                                Welcome to Luxton Hotel Cirebon.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
 
             <div class="untree_co--site-section float-left pb-0 featured-rooms">
 
@@ -139,10 +171,82 @@
                     <div class="container pt-0 pb-5">
                         <div class="row justify-content-center text-center">
                             <div class="col-lg-6 section-heading" data-aos="fade-up">
-                                <h3 class="text-center">Hotel Amenities</h3>
+                                <h3 class="text-center">Fasilitas Hotel</h3>
                             </div>
                         </div>
                     </div>
+
+                     <style>
+                    .menu-kategori {
+                        text-align: center;
+                        padding: 10px;
+                    }
+                    
+                    .img-categori {
+                        width: 80px; /* Ukuran gambar sedang */
+                        height: 80px;
+                        object-fit: cover; /* Agar gambar tidak terdistorsi */
+                        border-radius: 10px; /* Memberikan sedikit sudut melengkung agar lebih estetik */
+                        transition: transform 0.3s ease-in-out;
+                    }
+                    
+                    .img-categori:hover {
+                        transform: scale(1.1); /* Efek hover memperbesar sedikit */
+                    }
+                    
+                    .menu-kategori p {
+                        font-size: 14px; /* Ukuran teks lebih proporsional */
+                        font-weight: 600; /* Membuat teks lebih tegas */
+                        color: #333; /* Warna teks agar lebih elegan */
+                        margin-top: 5px;
+                    }
+                    </style>
+
+                    <div class="container-fluid mt-5">
+                        <div class="judul-kategori" style="background-color: #fff; padding: 5px 10px;">
+                          <h5 class="text-center" style="margin-top: 5px">KATEGORI</h5>
+                        </div>
+                        <div class="row justify-content-center text-center row-container mt-2">
+                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="menu-kategori">
+                              <a href="#baju"><img src="{{ asset('assets/images/svg/internet.svg') }}" class="img-categori mt-3"></a>
+                              <p class="mt-2">Baju</p>
+                            </div>
+                          </div>
+                      
+                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="menu-kategori">
+                              <a href="#celana"><img src="{{ asset('assets/images/svg/internet.svg') }}" class="img-categori mt-3"></a>
+                              <p class="mt-2">Celana</p>
+                            </div>
+                          </div>
+                      
+                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="menu-kategori">
+                              <a href="#skirt"><img src="img/k1.jpg" class="img-categori mt-3"></a>
+                              <p class="mt-2">Skirt</p>
+                            </div>
+                          </div>
+                      
+                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="menu-kategori">
+                              <a href="#dress"><img src="img/k3.jpg" class="img-categori mt-3"></a>
+                              <p class="mt-2">Dress</p>
+                            </div>
+                          </div>
+                      
+                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="menu-kategori">
+                              <a href="#outer"><img src="img/y.jpg" class="img-categori mt-3"></a>
+                              <p class="mt-2">Outer</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     
+                    
+                    
+
                     <div class="row custom-row-02192 align-items-stretch">
                         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                             <div class="media-29191 text-center h-100">

@@ -30,15 +30,15 @@
                       </ul>
                   </li>
                   <li><a href="/fasilitas">Fasilitas</a></li>
-                  <li><a href="about.html">Booking</a></li>
+                  <li><a href="about.html">Pesan Kamar</a></li>
                   <li><a href="gallery.html">Ulasan</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="contact.html">Tentang Kami</a></li>
               </ul>
           </div>
           <div class="icons-wrap text-md-right">
               <ul class="d-flex align-items-center">
                   <li>
-                      <a href="/profil"><i class="bi bi-person-circle mt-2 fs-3"></i></a>
+                      <a href="/profil"><i class="bi bi-person-circle mr-2 fs-5"></i></a>
                   </li>
               </ul>
           </div>
