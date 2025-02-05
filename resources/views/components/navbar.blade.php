@@ -30,9 +30,9 @@
                       </ul>
                   </li>
                   <li><a href="/fasilitas">Fasilitas</a></li>
-                  <li><a href="about.html">Pesan Kamar</a></li>
+                  <li><a href="/pesan-kamar">Pesan Kamar</a></li>
                   <li><a href="gallery.html">Ulasan</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="contact.html">Tentang Kami</a></li>
               </ul>
           </div>
           <div class="icons-wrap text-md-right">

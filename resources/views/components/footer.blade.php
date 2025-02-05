@@ -17,7 +17,6 @@
                 <li><a href="/fasilitas">Fasilitas</a></li>
                 <li><a href="/booking">Pesan Kamar</a></li>
                 <li><a href="#">Ulasan</a></li>
-                <li><a href="#">Contact</a></li>
               </ul>
             </div>
             <div class="col-md-9 ml-auto">
@@ -41,7 +40,7 @@
       <div class="row mt-5 pt-5 align-items-center">
         <div class="col-md-6 text-md-left">
           <p>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="index.html">Untree.co</a>. All Rights Reserved. Design by <a href="https://untree.co/" target="_blank" class="text-primary">Untree.co</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="index.html">Untree.co</a>. All Rights Reserved
           </p>
           </div>
         <div class="col-md-6 text-md-right">
@@ -54,9 +53,6 @@
           </li>
           <li>
             <a href="#"><span class="icon-instagram"></span></a>
-          </li>
-          <li>
-            <a href="#"><span class="icon-tripadvisor"></span></a>
           </li>
         </ul>
 
