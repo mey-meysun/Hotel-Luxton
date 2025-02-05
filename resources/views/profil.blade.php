@@ -36,27 +36,23 @@
                         </tr>
                         <tr>
                             <th><i class="bi bi-person-circle"></i> Nama</th>
-                            <td>nur</td>
+                            <td>{{ Auth::user()->nama }}</td>
                         </tr>
                         <tr>
                             <th><i class="bi bi-envelope"></i> Email</th>
-                            <td>nur@gmail.com</td>
+                            <td>{{ Auth::user()->email }}</td>
                         </tr>
                         <tr>
                             <th><i>@</i> Username</th>
-                            <td>nur</td>
+                            <td>{{ '@' . Auth::user()->username }}</td>
                         </tr>
                         <tr>
                             <th><i class="bi bi-key"></i> Password</th>
-                            <td>12345</td>
-                        </tr>
-                        <tr>
-                            <th><i class="bi bi-geo-alt-fill"></i> Alamat</th>
-                            <td>Cirebon</td>
+                            <td>{{ str_repeat('*', Auth::user()->password_length ?? 4) }}</td>
                         </tr>
                         <tr>
                             <th><i class="bi bi-telephone-fill"></i> No. Handphone</th>
-                            <td>1234567890</td>
+                            <td>{{ Auth::user()->hp }}</td>
                         </tr>
                     </table>
                 </div>
