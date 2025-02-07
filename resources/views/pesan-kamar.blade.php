@@ -17,14 +17,6 @@
       <div class="card p-4 shadow">
         <h4 class="mb-4 text-center">Tipe Kamar</h4>
         <form>
-          <div class="mb-3">
-            <label for="room-type" class="form-label">Jenis Kamar</label>
-            <select id="room-type" class="form-select">
-              <option>Standard Room</option>
-              <option>Deluxe Room</option>
-              <option>Suite Room</option>
-            </select>
-          </div>
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="checkin" class="form-label">Check-In</label>
@@ -38,7 +30,9 @@
           <div class="mb-4">
             <label for="guests" class="form-label">Tamu dan Kamar</label>
             <select id="guests" class="form-select">
-              <option>2 Dewasa, 0 Anak, 1 Kamar</option>
+              <option>
+                
+              </option>
               <option>1 Dewasa, 0 Anak, 1 Kamar</option>
               <option>2 Dewasa, 1 Anak, 1 Kamar</option>
             </select>
