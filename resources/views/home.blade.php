@@ -1,7 +1,8 @@
 <x-layout>
-        @section('head')
-            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-        @endsection 
+    @section('head')
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    @endsection
+    
     <!doctype html>
     <html lang="en">
 
@@ -250,7 +251,7 @@
                     
                     
 
-                     <div class="row custom-row-02192 align-items-stretch">
+                    {{-- <div class="row custom-row-02192 align-items-stretch">
                         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                             <div class="media-29191 text-center h-100">
                                 <div class="media-29191-icon">
@@ -279,17 +280,87 @@
                      </p>
             </div>
         </div>
-
+        
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
             <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/parking.svg') }}" 
+                <img src="{{ asset('assets/images/svg/wifi.svg') }}" 
                      class="img-categori mt-3 w-50" 
                      style="transition: transform 0.3s ease-in-out;" 
                      onmouseover="this.style.transform='scale(1.1)'" 
                      onmouseout="this.style.transform='scale(1)'">
                      <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
                      color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Free Self-Parking
+                     Free Internet Acces
+                     </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ asset('assets/images/svg/elevator.svg') }}" 
+                     class="img-categori mt-3 w-50" 
+                     style="transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                     Elevators
+                     </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ asset('assets/images/svg/partners.svg') }}" 
+                     class="img-categori mt-3 w-50" 
+                     style="transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                     Meeting rooms
+                     </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ asset('assets/images/svg/washing-machine.svg') }}" 
+                     class="img-categori mt-3 w-50" 
+                     style="transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                     Laundry and Valet service
+                     </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ asset('assets/images/swimm.png') }}" 
+                     class="img-categori mt-3 w-50" 
+                     style="transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                     Pool
+                     </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ asset('assets/images/restaurant.png') }}" 
+                     class="img-categori mt-3 w-50" 
+                     style="transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                     On-Site Restaurant
                      </p>
             </div>
         </div>
@@ -307,34 +378,9 @@
                      </p>
             </div>
         </div>
+        
 
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/parking.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Free Self-Parking
-                     </p>
-            </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/parking.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Free Self-Parking
-                     </p>
-            </div>
-        </div>
+        
     </div>
   </div>
                 </div>
@@ -374,4 +420,4 @@
     </body>
 
     </html>
-</x-layout>
+</x-layout >

@@ -46,3 +46,5 @@ Route::middleware('auth')->group(function () {
         Route::get('/profil', [HomeController::class, 'profil'])->name('customer.profil');
     });
 });
+//route resource for products
+// Route::resource('/fasilitas', \App\Http\Controllers\FasilitasController::class);
