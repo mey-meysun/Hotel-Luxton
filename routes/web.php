@@ -47,4 +47,4 @@ Route::middleware('auth')->group(function () {
     });
 });
 //route resource for products
-Route::resource('/fasilitas', \App\Http\Controllers\FasilitasController::class);
+// Route::resource('/fasilitas', \App\Http\Controllers\FasilitasController::class);
