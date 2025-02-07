@@ -37,7 +37,7 @@
           </div>
           <div class="icons-wrap text-md-right">
               <ul class="d-flex align-items-center">
-                  <li>
+                  <li style="list-style: none">
                       <a href="/profil"><i class="bi bi-person-circle mr-2 fs-5"></i></a>
                   </li>
               </ul>

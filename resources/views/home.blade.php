@@ -179,94 +179,9 @@
                             </div>
                         </div>
                     </div>
-
-                     <style>
-                    .menu-kategori {
-                        text-align: center;
-                        padding: 10px;
-                    }
-                    
-                    .img-categori {
-                        width: 80px; /* Ukuran gambar sedang */
-                        height: 80px;
-                        object-fit: cover; /* Agar gambar tidak terdistorsi */
-                        border-radius: 10px; /* Memberikan sedikit sudut melengkung agar lebih estetik */
-                        transition: transform 0.3s ease-in-out;
-                    }
-                    
-                    .img-categori:hover {
-                        transform: scale(1.1); /* Efek hover memperbesar sedikit */
-                    }
-                    
-                    .menu-kategori p {
-                        font-size: 14px; /* Ukuran teks lebih proporsional */
-                        font-weight: 600; /* Membuat teks lebih tegas */
-                        color: #333; /* Warna teks agar lebih elegan */
-                        margin-top: 5px;
-                    }
-                    </style>
-
-                    <div class="container-fluid mt-5">
-                        <div class="judul-kategori" style="background-color: #fff; padding: 5px 10px;">
-                          <h5 class="text-center" style="margin-top: 5px">KATEGORI</h5>
-                        </div>
-                        <div class="row justify-content-center text-center row-container mt-2">
-                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                            <div class="menu-kategori">
-                              <a href="#baju"><img src="{{ asset('assets/images/svg/internet.svg') }}" class="img-categori mt-3"></a>
-                              <p class="mt-2">Baju</p>
-                            </div>
-                          </div>
-                      
-                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                            <div class="menu-kategori">
-                              <a href="#celana"><img src="{{ asset('assets/images/svg/internet.svg') }}" class="img-categori mt-3"></a>
-                              <p class="mt-2">Celana</p>
-                            </div>
-                          </div>
-                      
-                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                            <div class="menu-kategori">
-                              <a href="#skirt"><img src="img/k1.jpg" class="img-categori mt-3"></a>
-                              <p class="mt-2">Skirt</p>
-                            </div>
-                          </div>
-                      
-                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                            <div class="menu-kategori">
-                              <a href="#dress"><img src="img/k3.jpg" class="img-categori mt-3"></a>
-                              <p class="mt-2">Dress</p>
-                            </div>
-                          </div>
-                      
-                          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                            <div class="menu-kategori">
-                              <a href="#outer"><img src="img/y.jpg" class="img-categori mt-3"></a>
-                              <p class="mt-2">Outer</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                    
-                    
-
-                    {{-- <div class="row custom-row-02192 align-items-stretch">
-                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                            <div class="media-29191 text-center h-100">
-                                <div class="media-29191-icon">
-                                    <img src="{{ asset('assets/images/svg/parking.svg') }}" alt="Image"
-                                        class="img-fluid">
-                                </div>
-                                <h3>Free Self-Parking</h3>
-                                <p>A hotel is an establishment that provides paid lodging on a short-term basis.
-                                    Facilities provided may range from a modest-quality.</p>
-                                <p>
-                                <p><a href="#" class="readmore reverse">Read More</a></p>
-                                </p>
-                            </div>
-                        </div>
-
+                        
+<div class="container-fluid mt-3">
+    <div class="row justify-content-center text-center row-container mt-2">
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
             <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
                 <img src="{{ asset('assets/images/svg/parking.svg') }}" 
@@ -378,14 +293,132 @@
                      </p>
             </div>
         </div>
-        
 
-        
     </div>
   </div>
                 </div>
             </div>
 
+
+            <div class="untree_co--site-section">
+                <div class="container">
+                    <div class="container pt-0 pb-5">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-6 section-heading" data-aos="fade-up">
+                                <h3 class="text-center">Hotel Amenities</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f8f8f8;
+                            margin: 0;
+                            padding: 0;
+                        }
+                
+                        .pool-section {
+                            display: flex;
+                            max-width: 1100px;
+                            margin: 50px auto;
+                            background: white;
+                            padding: 0;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                            border-radius: 10px;
+                            overflow: hidden;
+                        }
+                
+                        /* Gambar di sebelah kiri */
+                        .image-container {
+                            flex: 1.2;
+                            max-width: 50%;
+                        }
+                
+                        .image-container img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
+                        }
+                
+                        /* Bagian teks di sebelah kanan */
+                        .info {
+                            flex: 1;
+                            padding: 40px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                
+                        .info h2 {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                            color: #333;
+                        }
+                
+                        .info p {
+                            font-size: 16px;
+                            color: #666;
+                            line-height: 1.5;
+                            margin-bottom: 15px;
+                        }
+                
+                        .hours {
+                            font-weight: bold;
+                            color: #444;
+                            margin-bottom: 20px;
+                        }
+                
+                        .book-now {
+                            display: inline-block;
+                            background-color: #ffcc00;
+                            color: black;
+                            padding: 12px 24px;
+                            text-decoration: none;
+                            font-weight: bold;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            text-align: center;
+                            max-width: 150px;
+                        }
+                
+                        .book-now:hover {
+                            background-color: #e6b800;
+                        }
+                
+                        /* Responsif: Stack jadi vertikal di layar kecil */
+                        @media (max-width: 768px) {
+                            .pool-section {
+                                flex-direction: column;
+                            }
+                
+                            .image-container {
+                                max-width: 100%;
+                            }
+                        }
+                    </style>
+                </head>
+                <body>
+                
+                    <div class="pool-section">
+                        <!-- Gambar -->
+                        <div class="image-container">
+                            <img src="pool.jpg" alt="Pool View">
+                        </div>
+                
+                        <!-- Informasi -->
+                        <div class="info">
+                            <h2>POOL</h2>
+                            <p>After exploring Jakarta or having a busy day of meetings, relax at the outdoor hotel swimming pool at Park Hyatt Jakarta. 
+                               Take a refreshing swim in the tranquil waters. The pool is on the 35th floor, next to the fitness center, and offers a sun deck and city views. 
+                               Feel free to visit before or after your workout.</p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
 
 
             <div class="untree_co--site-section py-5 bg-body-darker cta">
