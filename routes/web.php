@@ -44,6 +44,9 @@ Route::middleware('auth')->group(function () {
     Route::middleware('customer')->group(function () {
         Route::get('/user/dashboard', [HomeController::class, 'customer'])->name('customer.dashboard');
         Route::get('/profil', [HomeController::class, 'profil'])->name('customer.profil');
+        Route::get('/profiledit', [HomeController::class, 'profiledit'])->name('customer.profiledit');
+        Route::put('/profiledit/{id}', [HomeController::class, 'updateProfile'])->name('customer.profiledit.update');
+
     });
 });
 //route resource for products
