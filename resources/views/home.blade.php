@@ -305,11 +305,10 @@
                     <div class="container pt-0 pb-5">
                         <div class="row justify-content-center text-center">
                             <div class="col-lg-6 section-heading" data-aos="fade-up">
-                                <h3 class="text-center">Hotel Amenities</h3>
+                                <h3 class="text-center"> Our Hotel</h3>
                             </div>
                         </div>
                     </div>
-
                     <style>
                         body {
                             font-family: Arial, sans-serif;
@@ -317,97 +316,116 @@
                             margin: 0;
                             padding: 0;
                         }
-                
+                    
+                        /* Container utama */
                         .pool-section {
                             display: flex;
+                            align-items: flex-end;
                             max-width: 1100px;
                             margin: 50px auto;
-                            background: white;
-                            padding: 0;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                            border-radius: 10px;
-                            overflow: hidden;
+                            position: relative;
                         }
-                
-                        /* Gambar di sebelah kiri */
+                    
+                        /* Gambar */
                         .image-container {
-                            flex: 1.2;
-                            max-width: 50%;
+                            flex: 1.9; /* Biar gambar lebih dominan */
+                            max-width: 75%; /* Lebar lebih besar dari sebelumnya */
                         }
-                
+                    
                         .image-container img {
                             width: 100%;
-                            height: 100%;
+                            height: 480px; /* Diperpanjang lagi */
                             object-fit: cover;
                             display: block;
+                            border-radius: 10px;
                         }
-                
-                        /* Bagian teks di sebelah kanan */
+                    
+                        /* Bagian teks */
                         .info {
                             flex: 1;
-                            padding: 40px;
+                            padding: 40px 50px;
+                            background: white;
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                            border-radius: 10px;
+                            border-left: 4px solid #E0D9C8; /* Hiasan kiri */
+                            border-top: 4px solid #E0D9C8; /* Hiasan atas */
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0; /* Sejajarkan bawahnya dengan gambar */
+                            width: 42%;
                         }
-                
+                    
+                        /* Hiasan tambahan di pojok kanan atas */
+                        .info::before {
+                            content: "";
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            width: 80px;
+                            height: 4px;
+                            background-color: #E0D9C8; /* Warna gold-ish */
+                        }
+                    
+                        /* Hiasan tambahan di pojok kiri bawah */
+                        .info::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 15px;
+                            left: 15px;
+                            width: 50px;
+                            height: 4px;
+                            background-color: #E0D9C8;
+                        }
+                    
+                        /* Judul */
                         .info h2 {
                             font-size: 24px;
-                            margin-bottom: 10px;
+                            margin-bottom: 15px;
                             color: #333;
                         }
-                
+                    
+                        /* Deskripsi */
                         .info p {
                             font-size: 16px;
                             color: #666;
-                            line-height: 1.5;
-                            margin-bottom: 15px;
+                            line-height: 1.6;
+                            margin-bottom: 10px;
                         }
-                
+                    
+                        /* Jam operasional */
                         .hours {
                             font-weight: bold;
                             color: #444;
-                            margin-bottom: 20px;
+                            margin-top: 10px;
                         }
-                
-                        .book-now {
-                            display: inline-block;
-                            background-color: #ffcc00;
-                            color: black;
-                            padding: 12px 24px;
-                            text-decoration: none;
-                            font-weight: bold;
-                            border-radius: 5px;
-                            font-size: 16px;
-                            text-align: center;
-                            max-width: 150px;
-                        }
-                
-                        .book-now:hover {
-                            background-color: #e6b800;
-                        }
-                
-                        /* Responsif: Stack jadi vertikal di layar kecil */
-                        @media (max-width: 768px) {
+                    
+                        /* Responsif */
+                        @media (max-width: 900px) {
                             .pool-section {
                                 flex-direction: column;
+                                align-items: center;
                             }
-                
+                    
                             .image-container {
                                 max-width: 100%;
                             }
+                    
+                            .info {
+                                max-width: 90%;
+                                position: static;
+                                text-align: center;
+                                padding: 30px;
+                            }
                         }
-                    </style>
-                </head>
-                <body>
-                
+                    </style>                    
+                    
                     <div class="pool-section">
-                        <!-- Gambar -->
                         <div class="image-container">
-                            <img src="pool.jpg" alt="Pool View">
+                            <img src="{{ asset('assets/images/swim.jpg') }}" alt="Pool View">
                         </div>
-                
-                        <!-- Informasi -->
                         <div class="info">
                             <h2>POOL</h2>
                             <p>After exploring Jakarta or having a busy day of meetings, relax at the outdoor hotel swimming pool at Park Hyatt Jakarta. 
@@ -416,7 +434,20 @@
                             <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
                         </div>
                     </div>
-            
+
+                    <div class="pool-section">
+                        <div class="image-container">
+                            <img src="{{ asset('assets/images/ruangmetting.jpg') }}" alt="Pool View">
+                        </div>
+                        <div class="info">
+                            <h2>POOL</h2>
+                            <p>After exploring Jakarta or having a busy day of meetings, relax at the outdoor hotel swimming pool at Park Hyatt Jakarta. 
+                               Take a refreshing swim in the tranquil waters. The pool is on the 35th floor, next to the fitness center, and offers a sun deck and city views. 
+                               Feel free to visit before or after your workout.</p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
 
