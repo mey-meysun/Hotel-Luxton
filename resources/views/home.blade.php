@@ -440,11 +440,13 @@
                             <img src="{{ asset('assets/images/ruangmetting.jpg') }}" alt="Pool View">
                         </div>
                         <div class="info">
-                            <h2>POOL</h2>
-                            <p>After exploring Jakarta or having a busy day of meetings, relax at the outdoor hotel swimming pool at Park Hyatt Jakarta. 
-                               Take a refreshing swim in the tranquil waters. The pool is on the 35th floor, next to the fitness center, and offers a sun deck and city views. 
-                               Feel free to visit before or after your workout.</p>
-                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
+                            <h2>Meeting Rooms</h2>
+                            <p>Elevate your casual business meeting at the Library on level 23. 
+                                Our lavish and cozy working space on the hotel lobby level caters to all your business requirements. 
+                                Discover a comprehensive range of amenities in the Library, 
+                                including high-speed Internet access and printing services.</p>
+                            <p class="hours">Hours
+                                From 10 am to 10 pm</p>
                         </div>
                     </div>
                     
