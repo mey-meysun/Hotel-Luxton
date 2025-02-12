@@ -428,12 +428,28 @@
                         </div>
                         <div class="info">
                             <h2>POOL</h2>
-                            <p>After exploring Jakarta or having a busy day of meetings, relax at the outdoor hotel swimming pool at Park Hyatt Jakarta. 
+                            <p>After exploring Jakarta or having a busy day of meetings, relax at the outdoor hotel swimming pool at Hotel Luxton Cirebon. 
                                Take a refreshing swim in the tranquil waters. The pool is on the 35th floor, next to the fitness center, and offers a sun deck and city views. 
                                Feel free to visit before or after your workout.</p>
                             <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
                         </div>
                     </div>
+                    
+                    <!-- Bagian kedua: Gambar dan teks bertukar posisi sepenuhnya -->
+                    <div class="pool-section">
+                        <div class="info">
+                            <h2>Fitness Centre</h2>
+                            <p>Located on the 35th floor and sweeping views of Central Jakarta, 
+                                the fitness center at Park Hyatt Jakarta offers an unparalleled workout experience 24 hours a day.
+                                Customize your fitness routine with Technogym® cardio equipment; stability, BOSE®, and medicine balls; 
+                                and free weights. Experience our wellness program with full-body workout stations available in a separate studio.</p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="{{ asset('assets/images/fitness.jpg') }}" alt="Fitness Centre">
+                        </div>
+                    </div>
+                    
 
                     <div class="pool-section">
                         <div class="image-container">
