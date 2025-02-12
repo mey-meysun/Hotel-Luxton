@@ -16,12 +16,9 @@
                     <img src="{{ asset('assets/images/p.jpg') }}" class="img-fluid rounded-circle border shadow-sm"
                         style="width: 180px; height: 180px; object-fit: cover;">
                     <div class="mt-3 d-flex gap-3 px-3">
-                        <a href="profile-edit.php">
-							<button class="mx-auto m-1 btn-sm btn btn-primary">Edit</button>
-						</a>
-						<a href="/user/dashboard">
-							<button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button>
-						</a>
+                        <a href="profiledit.php">
+                            <button class="btn btn-sm btn-info text-white">Edit Profile</button>
+                        </a>
                         <form action="{{ route('logout') }}" method="POST" role="search">
                             @csrf
                             @method('DELETE')
