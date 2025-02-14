@@ -27,9 +27,6 @@ Route::get('/fasilitas', function () {
 Route::get('/tipekamar', function () {
     return view('tipekamar');
 });
-Route::get('/pesan-kamar', function () {
-    return view('pesan-kamar');
-});
 
 // untuk yg sudah login
 Route::middleware('auth')->group(function () {
