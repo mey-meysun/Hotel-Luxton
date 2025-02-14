@@ -1,4 +1,5 @@
 <x-layout>
+  <link href="{{ asset('assets/css/profil.css') }}" rel="stylesheet">
     <div class="owl-carousel owl-hero">
 
         <div class="untree_co--site-hero overlay" style="background-image: url({{ asset('assets/images/slider_2.jpg') }}">
@@ -16,7 +17,7 @@
       </div>
 
     <section id="superior">
-      <div class="container mt-4">
+      <div class="container">
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card border-0 rounded-3 p-4 shadow">
@@ -55,7 +56,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
 
 </x-layout>
