@@ -30,71 +30,105 @@
         </div>
       </div>
 
-    <div class="container mt-3">
-      <div class="card shadow p-4">
-        <h2 class="mb-3 text-center">Pencarian Kamar</h2>
-        <form action="#" method="GET">
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <label for="checkin_date">Tanggal Check-in</label>
-              <input type="date" id="checkin_date" class="form-control rounded">
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="checkout_date">Tanggal Check-out</label>
-              <input type="date" id="checkout_date" class="form-control rounded">
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="night_count">Jumlah Malam</label>
-              <select id="night_count" class="form-control rounded">
-                @for ($i = 1; $i <= 30; $i++)
-                  <option value="{{ $i }}">{{ $i }} Malam</option>
-                @endfor
-              </select>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="room_type">Tipe Kamar</label>
-              <select id="room_type" class="form-control rounded">
-                <option value="">Pilih Tipe Kamar</option>
-                <option value="suite">Suite</option>
-                <option value="family">Family Room</option>
-                <option value="deluxe">Deluxe Room</option>
-                <option value="classic">Classic Room</option>
-                <option value="superior">Superior Room</option>
-                <option value="luxury">Luxury Room</option>
-              </select>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="adults">Jumlah Dewasa</label>
-              <select id="adults" class="form-control rounded">
-                @for ($i = 0; $i <= 6; $i++)
-                  <option value="{{ $i }}">{{ $i }} Dewasa</option>
-                @endfor
-              </select>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="children">Jumlah Anak</label>
-              <select id="children" class="form-control rounded">
-                @for ($i = 0; $i <= 6; $i++)
-                  <option value="{{ $i }}">{{ $i }} Anak</option>
-                @endfor
-              </select>
-            </div>
-            <div class="col-md-12 mb-3">
-              <label for="price_range">Rentang Harga (Rp)</label>
-              <div class="range-slider d-flex align-items-center">
-                <span class="me-2">Rp</span>
-                <input type="number" min="0" max="250000" value="250000" step="50000" class="form-control w-25 me-2 rounded">
-                <span class="me-2">-</span>
-                <input type="number" min="0" max="1200000" value="500000" step="50000" class="form-control w-25 rounded">
+      <div class="container mt-3">
+        <div class="card shadow p-4">
+          <h2 class="mb-3 text-center">Pencarian Kamar</h2>
+          <form action="#" method="GET">
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="checkin_date">Tanggal Check-in</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+                  <input type="date" id="checkin_date" class="form-control">
+                </div>
+              </div>
+      
+              <div class="col-md-4 mb-3">
+                <label for="checkout_date">Tanggal Check-out</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+                  <input type="date" id="checkout_date" class="form-control">
+                </div>
+              </div>
+      
+              <div class="col-md-4 mb-3">
+                <label for="night_count">Jumlah Malam</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-moon-stars"></i></span>
+                  <select id="night_count" class="form-control">
+                    @for ($i = 1; $i <= 30; $i++)
+                      <option value="{{ $i }}">{{ $i }} Malam</option>
+                    @endfor
+                  </select>
+                </div>
+              </div>
+      
+              <div class="col-md-4 mb-3">
+                <label for="room_type">Tipe Kamar</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-building"></i></span>
+                  <select id="room_type" class="form-control">
+                    <option value="">Pilih Tipe Kamar</option>
+                    <option value="suite">Suite</option>
+                    <option value="family">Family Room</option>
+                    <option value="deluxe">Deluxe Room</option>
+                    <option value="classic">Classic Room</option>
+                    <option value="superior">Superior Room</option>
+                    <option value="luxury">Luxury Room</option>
+                  </select>
+                </div>
+              </div>
+      
+              <div class="col-md-4 mb-3">
+                <label for="adults">Dewasa</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <select id="adults" class="form-control">
+                    @for ($i = 1; $i <= 6; $i++)
+                      <option value="{{ $i }}">{{ $i }} Dewasa</option>
+                    @endfor
+                  </select>
+                </div>
+              </div>
+      
+              <div class="col-md-4 mb-3">
+                <label for="children">Anak</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-people"></i></span>
+                  <select id="children" class="form-control">
+                    @for ($i = 0; $i <= 6; $i++)
+                      <option value="{{ $i }}">{{ $i }} Anak</option>
+                    @endfor
+                  </select>
+                </div>
+              </div>
+      
+              <div class="col-md-10 mb-3">
+                <label for="price_range">Rentang Harga (Rp)</label>
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="input-group">
+                      <span class="input-group-text">Rp</span>
+                      <input type="number" min="0" max="250000" value="250000" step="50000" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-2">-</div>
+                  <div class="col-md-5">
+                    <div class="input-group">
+                      <span class="input-group-text">Rp</span>
+                      <input type="number" min="0" max="1200000" value="500000" step="50000" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-md-12 text-end">
+                <button type="submit" class="btn btn-secondary rounded">Cari Kamar</button>
               </div>
             </div>
-            <div class="col-md-12 text-end">
-              <button type="submit" class="btn btn-secondary rounded">Cari Kamar</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+          </form>
+        </div>
+      </div>      
   </section>
 
   <script>
