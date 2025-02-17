@@ -17,4 +17,8 @@ class HomeController extends Controller
     public function profil(){
         return view('profil');
     }
+
+    public function profiledit(){
+        return view('profiledit');
+    }
 }
