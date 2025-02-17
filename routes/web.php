@@ -45,6 +45,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/user/dashboard', [HomeController::class, 'customer'])->name('customer.dashboard');
         Route::get('/profil', [HomeController::class, 'profil'])->name('customer.profil');
     });
+
+    Route::get('/edit', [AuthController::class, 'edit'])->name('customer.edit');
+    Route::put('/update/{id}', [AuthController::class, 'update'])->name('customer.update');
 });
+
+
 //route resource for products
 // Route::resource('/fasilitas', \App\Http\Controllers\FasilitasController::class);
