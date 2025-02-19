@@ -69,12 +69,10 @@
                   <span class="input-group-text"><i class="bi bi-building"></i></span>
                   <select id="room_type" class="form-control">
                     <option value="">Pilih Tipe Kamar</option>
-                    <option value="suite">Suite</option>
-                    <option value="family">Family Room</option>
-                    <option value="deluxe">Deluxe Room</option>
-                    <option value="classic">Classic Room</option>
-                    <option value="superior">Superior Room</option>
-                    <option value="luxury">Luxury Room</option>
+                    <option value="strandar">Strandar</option>
+                    <option value="superior">Superior</option>
+                    <option value="deluxe">Deluxe </option>
+                    <option value="executive">Executive</option>
                   </select>
                 </div>
               </div>
@@ -84,7 +82,7 @@
                 <div class="input-group">
                   <span class="input-group-text"><i class="bi bi-person"></i></span>
                   <select id="adults" class="form-control">
-                    @for ($i = 1; $i <= 6; $i++)
+                    @for ($i = 1; $i <= 10; $i++)
                       <option value="{{ $i }}">{{ $i }} Dewasa</option>
                     @endfor
                   </select>
@@ -103,25 +101,24 @@
                 </div>
               </div>
       
-              <div class="col-md-10 mb-3">
-                <label for="price_range">Rentang Harga (Rp)</label>
-                <div class="row">
-                  <div class="col-md-5">
-                    <div class="input-group">
-                      <span class="input-group-text">Rp</span>
-                      <input type="number" min="0" max="250000" value="250000" step="50000" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-md-2">-</div>
-                  <div class="col-md-5">
-                    <div class="input-group">
-                      <span class="input-group-text">Rp</span>
-                      <input type="number" min="0" max="1200000" value="500000" step="50000" class="form-control">
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
+            <div class="row align-items-center">
+              <label for="rentang harga">Rentang Harga</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-text">Rp</span>
+      <input type="number" min="0" max="250000" value="250000" step="50000" class="form-control">
+    </div>
+  </div>
+  <div class="col-auto d-flex align-items-center px-1">
+    <span>-</span>
+  </div> 
+  <div class="col-md-4">  
+    <div class="input-group">
+      <span class="input-group-text">Rp</span>
+      <input type="number" min="0" max="1200000" value="500000" step="50000" class="form-control">
+    </div>
+  </div>
+</div>
               <div class="col-md-12 text-end">
                 <button type="submit" class="btn btn-secondary rounded">Cari Kamar</button>
               </div>
