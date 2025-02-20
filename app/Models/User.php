@@ -9,9 +9,8 @@ class User extends Authenticatable
 {
     use HasFactory;
 
-    protected $fillable = ['nama', 'email', 'username', 'password', 'hp', 'role'];
+    protected $fillable = ['nama', 'email', 'username', 'password', 'hp', 'role', 'password_length'];
 
-    // Setter otomatis untuk password
     public function setPasswordAttribute($value)
     {
         if (!empty($value)) {

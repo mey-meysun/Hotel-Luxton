@@ -16,14 +16,10 @@
                     <img src="{{ asset('assets/images/p.jpg') }}" class="img-fluid rounded-circle border shadow-sm"
                         style="width: 180px; height: 180px; object-fit:cover;">
                     <div class="mt-3 d-flex gap-3 px-3">
-<<<<<<< HEAD
                         <a href="{{ route('customer.edit') }}">
                             <button class="btn btn-sm btn-info text-white">Edit Profile</button>
-=======
-                    <a href="{{ route('customer.profiledit') }}">
-                           <button class="btn btn-sm btn-info text-white">Edit Profile</button>
->>>>>>> 231654d0d3ce4a445a89ab68ff7abec4e43c5ac0
                         </a>
+
                         <form action="{{ route('logout') }}" method="POST" role="search">
                             @csrf
                             @method('DELETE')
@@ -58,7 +54,7 @@
                         </tr>
                         <tr>
                             <th><i class="bi bi-key"></i> Password</th>
-                            <td>{{ str_repeat('*', Auth::user()->password_length ?? 4) }}</td>
+                            <td>{{ str_repeat('*', Auth::user()->password_length ?? 3) }}</td>
                         </tr>
                         <tr>
                             <th><i class="bi bi-telephone-fill"></i> No. Handphone</th>

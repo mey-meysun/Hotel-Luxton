@@ -20,7 +20,6 @@ class UserSeeder extends Seeder
                 'email' => 'john@gmail.com',
                 'username' => 'john',
                 'password' => Hash::make('123'),
-                'password_length' => strlen('123'),
                 'hp' => '085715431336',
                 'role' => 'customer',
             ],
@@ -29,7 +28,6 @@ class UserSeeder extends Seeder
                 'email' => 'admin@gmail.com',
                 'username' => 'admin',
                 'password' => Hash::make('234'),
-                'password_length' => strlen('234'),
                 'hp' => '087655431276',
                 'role' => 'admin',
             ]

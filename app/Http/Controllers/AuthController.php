@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -21,10 +21,10 @@ class AuthController extends Controller
         $user->email = $request->email;
         $user->username = $request->username;
         $user->password = Hash::make($request->password);
+        $user->password_length = strlen($request->password);
         $user->hp = $request->hp;
         $user->save();
-
-        return redirect()->route('login')->with('success', 'Register successfully');
+        return back()->with('success', 'Register successfully');
     }
 
     public function login()
@@ -34,21 +34,16 @@ class AuthController extends Controller
 
     public function loginPost(Request $request)
     {
-        $credentials = [
-            'username' => $request->username,
-            'password' => $request->password
-        ];
+        $credentials = $request->only('username', 'password');
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
 
             if ($user->role == 'admin') {
-                return redirect()->route('admin.dashboard')->with('success', 'Login Admin Berhasil');
+                return redirect('/admin/dashboard')->with('success', 'Login Admin Berhasil');
             }
-
-            return redirect()->route('customer.profil')->with('success', 'Login Berhasil');
+            return redirect('/profil')->with('success', 'Login Berhasil');
         }
-
         return back()->with('error', 'Username atau Password salah');
     }
 
@@ -70,34 +65,23 @@ class AuthController extends Controller
 
     public function edit()
     {
-        $user = Auth::user();
-        return view('edit', compact('user'));
+        return view('edit');
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $request->validate([
-            'nama'     => 'required|min:3',
-            'email'    => 'required|min:5',
-            'username' => 'required|min:3',
-            'hp'       => 'required|numeric|digits_between:10,13',
-            'password' => 'nullable|min:3',
-        ]);
+        $user = Auth::user();
+        $user->nama = $request->nama;
+        $user->email = $request->email;
+        $user->username = $request->username;
+        $user->hp = $request->hp;
 
-        $user = User::findOrFail($id);
-
-        $data = [
-            'nama'     => $request->nama,
-            'email'    => $request->email,
-            'username' => $request->username,
-            'hp'       => $request->hp,
-        ];
-
-        if ($request->filled('password')) {
-            $data['password'] = Hash::make($request->password); // Pastikan hanya di-hash sekali
-            $data['password_length'] = strlen($request->password); // Simpan panjang password
+        if (!empty($request->password)) {
+            $user->password_length = strlen($request->password);
+            $user->password = $request->password;
         }
 
-        return redirect()->route('customer.profil')->with('success', 'Data user berhasil diperbarui!');
+        $user->save();
+        return redirect()->route('customer.profil')->with('success', 'Profil berhasil diperbarui');
     }
 }
