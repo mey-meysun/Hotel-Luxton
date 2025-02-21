@@ -85,9 +85,7 @@
                                 Hotel Luxton Cirebon adalah hotel modern yang terletak di pusat kota Cirebon, menawarkan kenyamanan dan kemewahan dengan berbagai fasilitas premium. 
                                 Dikenal dengan desain yang elegan, hotel ini memberikan pengalaman menginap yang luar biasa, cocok untuk perjalanan bisnis maupun liburan.
                                  Nikmati berbagai fasilitas seperti kolam renang outdoor, spa, serta restoran dan bar dengan pemandangan kota yang menakjubkan,
-                                  memberikan pengalaman yang menyenangkan selama menginap.
-
-
+                                  memberikan pengalaman yang menyenangkan selama menginap. 
                             </p>
                             <p style="font-family: Georgia, serif; font-size: 16px; line-height: 1.6;">
                                 Hotel Luxton Cirebon juga merupakan tempat ideal untuk pertemuan dan acara, 
@@ -182,118 +180,167 @@
                         
 <div class="container-fluid mt-3">
     <div class="row justify-content-center text-center row-container mt-2">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/parking.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Free Self-Parking
-                     </p>
-            </div>
-        </div>
         
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
             <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/wifi.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Free Internet Acces
-                     </p>
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                    <img src="{{ asset('assets/images/pool.jpg') }}" 
+                         class="img-categori mt-3" 
+                         style="width: 80px; transition: transform 0.3s ease-in-out;" 
+                         onmouseover="this.style.transform='scale(1.1)'" 
+                         onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                   color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                  Kolam Renang
+                </p>
             </div>
         </div>
-        
+
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
             <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/elevator.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Elevators
-                     </p>
-            </div>
-        </div>
-        
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/partners.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Meeting rooms
-                     </p>
-            </div>
-        </div>
-        
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/washing-machine.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Laundry and Valet service
-                     </p>
-            </div>
-        </div>
-        
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/swimm.png') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
-                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
-                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Pool
-                     </p>
-            </div>
-        </div>
-        
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
                 <img src="{{ asset('assets/images/restaurant.png') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
-                     onmouseover="this.style.transform='scale(1.1)'" 
-                     onmouseout="this.style.transform='scale(1)'">
+                class="img-categori mt-3" 
+                style="width: 90px; transition: transform 0.3s ease-in-out;" 
+                onmouseover="this.style.transform='scale(1.1)'" 
+                onmouseout="this.style.transform='scale(1)'">
+                </div>
                      <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
                      color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     On-Site Restaurant
+                    Restoran
+                     </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                <img src="{{ asset('assets/images/svg/partners.svg') }}" 
+                class="img-categori mt-3" 
+                style="width: 70px; transition: transform 0.3s ease-in-out;" 
+                onmouseover="this.style.transform='scale(1.1)'" 
+                onmouseout="this.style.transform='scale(1)'">   
+                </div>        
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                    Ruang Pertemuan
+                     </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                <img src="{{ asset('assets/images/spa1.jpg') }}" 
+                     class="img-categori mt-3" 
+                     style="width: 80px; transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                </div>
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                     Spa
                      </p>
             </div>
         </div>
 
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
             <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ asset('assets/images/svg/parking.svg') }}" 
-                     class="img-categori mt-3 w-50" 
-                     style="transition: transform 0.3s ease-in-out;" 
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                    <img src="{{ asset('assets/images/fitness2.png') }}" 
+                         class="img-categori mt-3" 
+                         style="width: 100px; transition: transform 0.3s ease-in-out;" 
+                         onmouseover="this.style.transform='scale(1.1)'" 
+                         onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                   color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                  Pusat Kebugaran
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                    <img src="{{ asset('assets/images/masjid2.png') }}" 
+                         class="img-categori mt-3" 
+                         style="width: 100px; transition: transform 0.3s ease-in-out;" 
+                         onmouseover="this.style.transform='scale(1.1)'" 
+                         onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                   color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                  Mushollah
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                    <img src="{{ asset('assets/images/svg/parking.svg') }}" 
+                         class="img-categori mt-3" 
+                         style="width: 90px; transition: transform 0.3s ease-in-out;" 
+                         onmouseover="this.style.transform='scale(1.1)'" 
+                         onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                   color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                  Parkir Gratis
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                <img src="{{ asset('assets/images/svg/wifi.svg') }}" 
+                     class="img-categori mt-3" 
+                     style="width: 70px; transition: transform 0.3s ease-in-out;" 
                      onmouseover="this.style.transform='scale(1.1)'" 
                      onmouseout="this.style.transform='scale(1)'">
+                </div>
                      <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
                      color: #000; text-align: center; font-family: 'Playfair Display', serif;">
-                     Free Self-Parking
+                     Akses Internet Gratis.
                      </p>
             </div>
         </div>
 
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                <img src="{{ asset('assets/images/svg/washing-machine.svg') }}" 
+                     class="img-categori mt-3" 
+                     style="width: 70px; transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                </div>
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                    Layanan Laundry
+                     </p>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                <img src="{{ asset('assets/images/svg/elevator.svg') }}" 
+                     class="img-categori mt-3" 
+                     style="width: 70px; transition: transform 0.3s ease-in-out;" 
+                     onmouseover="this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                </div>
+                     <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                     color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                     Lift
+                     </p>
+            </div>
+        </div>
+        
     </div>
   </div>
                 </div>
@@ -340,24 +387,31 @@
                             border-radius: 10px;
                         }
                     
-                        /* Bagian teks */
                         .info {
-                            flex: 1;
-                            padding: 40px 50px;
-                            background: white;
-                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-                            border-radius: 10px;
-                            border-left: 4px solid #E0D9C8; /* Hiasan kiri */
-                            border-top: 4px solid #E0D9C8; /* Hiasan atas */
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            position: absolute;
-                            right: 0;
-                            bottom: 0; /* Sejajarkan bawahnya dengan gambar */
-                            width: 42%;
-                        }
-                    
+    flex: 1;
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    border-left: 4px solid #E0D9C8;
+    border-top: 4px solid #E0D9C8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 42%; /* Lebar dikurangi dari 50% ke 45% supaya tidak terlalu nutupin gambar */
+    min-height: 320px;
+    backdrop-filter: blur(5px);
+}
+
+/* Untuk mode reverse */
+.reverse .info {
+    left: 0;
+    right: auto;
+}
+
                         /* Hiasan tambahan di pojok kanan atas */
                         .info::before {
                             content: "";
@@ -401,7 +455,12 @@
                             color: #444;
                             margin-top: 10px;
                         }
-                    
+/* Tata letak terbalik untuk div kedua */
+.reverse {
+    display: flex; /* Pastikan tetap flex */
+    flex-direction: row-reverse; /* Balik posisi gambar & teks */
+}
+
                         /* Responsif */
                         @media (max-width: 900px) {
                             .pool-section {
@@ -420,68 +479,89 @@
                                 padding: 30px;
                             }
                         }
-                    </style>                    
-                    
+                    </style>
+
                     <div class="pool-section">
                         <div class="image-container">
                             <img src="{{ asset('assets/images/swim.jpg') }}" alt="Pool View">
                         </div>
                         <div class="info">
-                            <h2>POOL</h2>
-                            <p>After exploring Jakarta or having a busy day of meetings, relax at the outdoor hotel swimming pool at Hotel Luxton Cirebon. 
-                               Take a refreshing swim in the tranquil waters. The pool is on the 35th floor, next to the fitness center, and offers a sun deck and city views. 
-                               Feel free to visit before or after your workout.</p>
+                            <h2>KOLAM RENANG</h2>
+                            <p>Setelah seharian menjelajahi Cirebon atau menghadiri pertemuan penting, 
+                                bersantailah di kolam renang Hotel Luxton Cirebon. 
+                                Nikmati kesegaran berenang di air yang tenang sambil menikmati pemandangan kota yang menakjubkan.
+                                Ini adalah tempat yang sempurna untuk melepas penat dan menikmati suasana.
+                            </p>
                             <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
                         </div>
                     </div>
-                    
-                    <!-- Bagian kedua: Gambar dan teks bertukar posisi sepenuhnya -->
-                    <div class="pool-section">
-                        <div class="info">
-                            <h2>Fitness Centre</h2>
-                            <p>Located on the 35th floor and sweeping views of Central Jakarta, 
-                                the fitness center at Park Hyatt Jakarta offers an unparalleled workout experience 24 hours a day.
-                                Customize your fitness routine with Technogym® cardio equipment; stability, BOSE®, and medicine balls; 
-                                and free weights. Experience our wellness program with full-body workout stations available in a separate studio.</p>
-                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
-                        </div>
+
+                    <div class="pool-section reverse">
                         <div class="image-container">
-                            <img src="{{ asset('assets/images/fitness.jpg') }}" alt="Fitness Centre">
+                            <img src="{{ asset('assets/images/restoran.jpg') }}" alt="Pool View">
+                        </div>
+                        <div class="info">
+                            <h2>RESTORAN</h2>
+                            <p>Nikmati hidangan lezat di restoran Hotel Luxton Cirebon dengan suasana elegan dan pemandangan kota yang menawan, 
+                                restoran ini menyajikan hidangan lokal dan internasional yang menggugah selera.
+                                Sempurna untuk bersantap atau bersantai.</p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
                         </div>
                     </div>
-                    
 
                     <div class="pool-section">
                         <div class="image-container">
                             <img src="{{ asset('assets/images/ruangmetting.jpg') }}" alt="Pool View">
                         </div>
                         <div class="info">
-                            <h2>Meeting Rooms</h2>
-                            <p>Elevate your casual business meeting at the Library on level 23. 
-                                Our lavish and cozy working space on the hotel lobby level caters to all your business requirements. 
-                                Discover a comprehensive range of amenities in the Library, 
-                                including high-speed Internet access and printing services.</p>
-                            <p class="hours">Hours
-                                From 10 am to 10 pm</p>
+                            <h2>RUANG PERTEMUAN</h2>
+                            <p>Adakan pertemuan bisnis yang nyaman dan profesional di meeting room Hotel Luxton Cirebon. 
+                                Dilengkapi dengan fasilitas modern dan suasana elegan, ruangan ini cocok untuk rapat, seminar, atau acara khusus. 
+                                Lokasi strategis dan layanan terbaik memastikan setiap pertemuan berjalan lancar dan sukses.</p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
                         </div>
                     </div>
-                    
-                </div>
-            </div>
 
-
-            <div class="untree_co--site-section py-5 bg-body-darker cta">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a
-                                    href="tel://+123456789012">+12.345.678.9012</a></h3>
+                    <div class="pool-section reverse">
+                        <div class="image-container">
+                            <img src="{{ asset('assets/images/spa4.jpeg') }}" alt="Pool View">
+                        </div>
+                        <div class="info">
+                            <h2>SPA</h2>
+                            <p>Rileks dan segarkan diri di spa Hotel Luxton Cirebon.
+                                Nikmati perawatan menenangkan dengan suasana nyaman dan layanan profesional. 
+                                Pilihan terapi yang tersedia membantu meredakan stres dan mengembalikan energi, 
+                                sempurna untuk melepas penat setelah hari yang sibuk.</p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        </div>
+
+                    <div class="pool-section">
+                        <div class="image-container">
+                            <img src="{{ asset('assets/images/mushollah.jpeg') }}" alt="Pool View">
+                        </div>
+                        <div class="info">
+                            <h2>MUSHOLLAH</h2>
+                            <p>Laksanakan ibadah dengan nyaman di musholla Hotel Luxton Cirebon. 
+                                Dengan suasana tenang dan fasilitas yang bersih,
+                                 musholla ini menyediakan tempat yang ideal untuk berdoa dan beristirahat sejenak di tengah aktivitas Anda.
+                            </p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
+                        </div>
+                    </div>
+
+                    <div class="pool-section reverse">
+                        <div class="image-container">
+                            <img src="{{ asset('assets/images/fitness.jpg') }}" alt="Pool View">
+                        </div>
+                        <div class="info">
+                            <h2>PUSAT KEBUGARAN</h2>
+                            <p>Jaga kebugaran Anda di pusat kebugaran Hotel Luxton Cirebon. 
+                                Dilengkapi dengan peralatan modern dan suasana nyaman, tempat ini ideal untuk berolahraga, 
+                                baik kardio maupun latihan kekuatan. Nikmati pengalaman berolahraga yang menyegarkan dengan fasilitas terbaik.</p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
+                        </div>
+                    </div>      
 
         <!-- Search -->
         <div class="search-wrap">
