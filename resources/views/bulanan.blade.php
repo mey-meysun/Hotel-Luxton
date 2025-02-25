@@ -169,7 +169,7 @@
         <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="#"><i class="fas fa-calendar-check"></i> Data Reservasi</a>
         <a href="/kamar"><i class="fas fa-bed"></i> Data Kamar</a>
-        <a href="#"><i class="fas fa-cogs"></i> Data Fasilitas</a>
+        <a href="/fasilitas/create"><i class="fas fa-cogs"></i> Data Fasilitas</a>
         <a href="/bulanan"><i class="fas fa-chart-line"></i> Laporan Bulanan</a>
     </div>
 
