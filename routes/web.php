@@ -38,6 +38,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/fasilitas', [FacilitiesController::class, 'store'])->name('fasilitas.store');
         Route::put('/fasilitas/{id}', [FacilitiesController::class, 'update'])->name('fasilitas.update');
         Route::delete('/fasilitas/{id}', [FacilitiesController::class, 'destroy'])->name('fasilitas.destroy');
+        Route::get('/bulanan', function () {
+            return view('bulanan');
+        });
     });
 
     // Rute untuk customer
