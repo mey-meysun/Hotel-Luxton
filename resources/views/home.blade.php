@@ -276,6 +276,22 @@
                 </p>
             </div>
         </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+                <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                    <img src="{{ asset('assets/images/taman.png') }}" 
+                         class="img-categori mt-3" 
+                         style="width: 90px; transition: transform 0.3s ease-in-out;" 
+                         onmouseover="this.style.transform='scale(1.1)'" 
+                         onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p style="margin-top: 8px; font-size: 18px; font-weight: 700; 
+                   color: #000; text-align: center; font-family: 'Playfair Display', serif;">
+                  Taman
+                </p>
+            </div>
+        </div>
         
         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
             <div class="menu-kategori" style="text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
@@ -561,7 +577,21 @@
                                 baik kardio maupun latihan kekuatan. Nikmati pengalaman berolahraga yang menyegarkan dengan fasilitas terbaik.</p>
                             <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
                         </div>
-                    </div>      
+                    </div>     
+                    
+                    <div class="pool-section">
+                        <div class="image-container">
+                            <img src="{{ asset('assets/images/taman1.jpeg') }}" alt="Pool View">
+                        </div>
+                        <div class="info">
+                            <h2>Taman</h2>
+                            <p>Nikmati kesejukan dan keindahan di taman Hotel Luxton Cirebon.
+                                Dikelilingi oleh pepohonan hijau dan suasana yang menenangkan, tempat ini ideal untuk bersantai, berjalan santai, atau berolahraga ringan.
+                                Rasakan pengalaman relaksasi yang menyegarkan di tengah suasana asri yang menenangkan.
+                            </p>
+                            <p class="hours">Hours: 6:00 a.m. - 8:00 p.m.</p>
+                        </div>
+                    </div>
 
         <!-- Search -->
         <div class="search-wrap">
