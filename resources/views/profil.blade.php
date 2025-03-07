@@ -14,11 +14,12 @@
                 <!-- Bagian Foto dan Tombol -->
                 <div class="col-md-4 text-center">
                     <img src="{{ asset('assets/images/p.jpg') }}" class="img-fluid rounded-circle border shadow-sm"
-                        style="width: 180px; height: 180px; object-fit: cover;">
+                        style="width: 180px; height: 180px; object-fit:cover;">
                     <div class="mt-3 d-flex gap-3 px-3">
-                    <a href="{{ route('customer.profiledit') }}">
-                           <button class="btn btn-sm btn-info text-white">Edit Profile</button>
+                        <a href="{{ route('customer.edit') }}">
+                            <button class="btn btn-sm btn-info text-white">Edit Profile</button>
                         </a>
+
                         <form action="{{ route('logout') }}" method="POST" role="search">
                             @csrf
                             @method('DELETE')
@@ -30,6 +31,11 @@
                 <!-- Bagian Detail Profil -->
                 <div class="col-md-8">
                     <h2 class="mb-3">User Profile</h2>
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                     <table class="table table-borderless">
                         <tr>
                             <th colspan="2" class="h5 text-secondary">User Details:</th>
@@ -44,11 +50,11 @@
                         </tr>
                         <tr>
                             <th><i>@</i> Username</th>
-                            <td>{{ '@' . Auth::user()->username }}</td>
+                            <td>{{ Auth::user()->username }}</td>
                         </tr>
                         <tr>
                             <th><i class="bi bi-key"></i> Password</th>
-                            <td>{{ str_repeat('*', Auth::user()->password_length ?? 4) }}</td>
+                            <td>{{ str_repeat('*', Auth::user()->password_length ?? 3) }}</td>
                         </tr>
                         <tr>
                             <th><i class="bi bi-telephone-fill"></i> No. Handphone</th>
