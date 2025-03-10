@@ -19,7 +19,7 @@
                     </li>
                     <li><a href="/fasilitas" class="@if (Request::is('profil')) text-dark @endif">Fasilitas</a></li>
                     <li><a href="gallery.html" class="@if (Request::is('profil')) text-dark @endif">Ulasan</a></li>
-                    <li><a href="contact.html" class="@if (Request::is('profil')) text-dark @endif">Tentang Kami</a></li>
+                    <li><a href="/tentangkami" class="@if (Request::is('profil')) text-dark @endif">Tentang Kami</a></li>
                 </ul>
             </div>
             <div class="icons-wrap text-md-right">

@@ -27,6 +27,10 @@ Route::get('/tipekamar', function () {
     return view('tipekamar');
 });
 
+Route::get('/tentangkami', function () {
+    return view('tentangkami');
+});
+
 // untuk yg sudah login
 Route::middleware('auth')->group(function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
