@@ -1,0 +1,75 @@
+/* Reset CSS hanya untuk elemen dalam daftar kamar */
+.room-list * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header tetap menggunakan font default halaman */
+header {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    font-family: inherit; /* Mengembalikan font ke default halaman */
+}
+
+/* Grid tampilan kamar */
+.room-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.room {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.room:hover {
+    transform: translateY(-5px);
+}
+
+.room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room h2 {
+    margin: 10px 0;
+}
+
+.room p {
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #e63946;
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #b02a2a;
+}

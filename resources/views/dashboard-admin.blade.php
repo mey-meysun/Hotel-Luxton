@@ -20,6 +20,19 @@
         <a href="/kamar"><i class="fas fa-bed"></i> Data Kamar boya</a>
         <a href="/fasilitas/create"><i class="fas fa-cogs"></i> Data Fasilitas</a>
         <a href="/bulanan"><i class="fas fa-chart-line"></i> Laporan Bulanan</a>
+        {{-- <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Logout</button>
+        </form> --}}
+        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+        
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+            @method('DELETE')
+        </form>              
     </div>
 
     <div class="content">
