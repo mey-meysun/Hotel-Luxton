@@ -1,8 +1,21 @@
 <x-layout>
     @section('head')
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-    @endsection
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+@endsection
+
+@section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.5
+        });
+    });
+</script>
+@endsection
+
+
     <!doctype html>
     <html lang="en">
 
@@ -106,13 +119,13 @@
                         </div>
                     </div>
                 </div>
-
+            
                 <div class="container-fluid pt-5">
                     <div class="suite-wrap overlap-image-1">
 
                         <div class="suite">
                             <div class="image-stack">
-                                <div class="image-stack-item image-stack-item-top" data-jarallax-element="-30">
+                                <div class="image-stack-item image-stack-item-top jarallax" data-jarallax-element="-30">
                                     <div class="overlay"></div>
                                     <img src="{{ asset('assets/images/room_1_a.jpg') }}" alt="Image"
                                         class="img-fluid pic1">

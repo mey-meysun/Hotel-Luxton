@@ -1,0 +1,73 @@
+/* Hero Section */
+.hero-section {
+    background: url('../images/luxton-banner.jpg') center/cover no-repeat;
+    color: white;
+    padding: 90px 0;
+    text-align: center;
+}
+
+.sub-heading {
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+/* Card Desain */
+.about-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Gambar */
+.image-box img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fitur Box */
+.feature-box {
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-box i {
+    font-size: 45px;
+    color: #0072ff;
+    margin-bottom: 10px;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Tombol CTA */
+.btn-luxton {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-luxton:hover {
+    background: linear-gradient(to right, #005bb5, #009fd9);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
