@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
 
     // Rute untuk admin
     Route::middleware('admin')->group(function () {
-        Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('admin');
         Route::get('/fasilitas/create/{id?}', [FacilitiesController::class, 'create'])->name('fasilitas.create');
         Route::post('/fasilitas', [FacilitiesController::class, 'store'])->name('fasilitas.store');
         Route::put('/fasilitas/{id}', [FacilitiesController::class, 'update'])->name('fasilitas.update');
@@ -46,7 +46,7 @@ Route::middleware('auth')->group(function () {
     // Rute untuk customer
     Route::middleware('customer')->group(function () {
         Route::get('/user/dashboard', [HomeController::class, 'customer'])->name('customer.dashboard');
-        Route::get('/profil', [HomeController::class, 'profil'])->name('customer.profil');
+        Route::get('/profil', [HomeController::class, 'profil'])->name('customer.profil')->middleware('customer');
     });
 
     Route::get('/edit', [AuthController::class, 'edit'])->name('customer.edit');

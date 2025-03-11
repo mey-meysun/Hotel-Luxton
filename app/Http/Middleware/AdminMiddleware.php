@@ -16,9 +16,13 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (!Auth::check()) {
+            return redirect('/login')->with('error', 'Anda harus login terlebih dahulu.');
+        } 
+        
         if (Auth::check() && Auth::user()->role === 'admin') {
             return $next($request);
         }
-        return redirect('/')->with('error', 'Akses ditolak!');
+        return redirect('/profil')->with('error', 'Akses ditolak!');
     }
 }

@@ -13,14 +13,7 @@
     <link href="{{ asset('assets/css/styledashboard.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Admin Dashboard</h2>
-        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="#"><i class="fas fa-calendar-check"></i> Data Reservasi</a>
-        <a href="/kamar"><i class="fas fa-bed"></i> Data Kamar boya</a>
-        <a href="/fasilitas/create"><i class="fas fa-cogs"></i> Data Fasilitas</a>
-        <a href="/bulanan"><i class="fas fa-chart-line"></i> Laporan Bulanan</a>
-    </div>
+    <x-sidebar />
 
     <div class="content">
         <h1 class="mb-4">Selamat Datang, Admin!</h1>
@@ -121,5 +114,26 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        @if(session('success'))
+            Swal.fire({
+                icon: "success",
+                title: "Berhasil!",
+                text: "{{ session('success') }}",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        @elseif(session('error'))
+            Swal.fire({
+                icon: "error",
+                title: "Gagal!",
+                text: "{{ session('error') }}",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        @endif
+    </script>
 </body>
 </html>

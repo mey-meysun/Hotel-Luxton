@@ -10,9 +10,8 @@
     <title>Halaman Registrasi</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Jika style1.css tidak diperlukan, hapus link ini -->
     <link href="{{ asset('assets/css/style1.css') }}" rel="stylesheet">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,42 +20,58 @@
             <i class="fas fa-user-plus"></i>
         </div>
         <h2>Registrasi</h2>
-        @if (Session::has('success'))
-            <div class="alert alert-success" role="alert">
-                {{ Session::get('success') }}
-            </div>
-        @endif
+
         <form action="{{ route('register') }}" method="POST">
             @csrf
-            <!-- Input Nama -->
-            <div class="input-container">
+
+            <div class="input-container mb-1 mt-1">
                 <i class="fas fa-user"></i>
-                <input type="text" name="nama" placeholder="Nama Lengkap" required>
+                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama"
+                    placeholder="Nama Lengkap">
             </div>
-            <!-- Input Email -->
-            <div class="input-container">
+            @error('nama')
+                <small class="text-danger">{{ $message }}</small>
+            @enderror
+
+            <div class="input-container mb-1 mt-1">
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                    placeholder="Email">
             </div>
-            <!-- Input Username -->
-            <div class="input-container">
+            @error('email')
+                <small class="text-danger">{{ $message }}</small>
+            @enderror
+
+            <div class="input-container mb-1 mt-1">
                 <i class="fas fa-user-tag"></i>
-                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" class="form-control @error('username') is-invalid @enderror" name="username"
+                    placeholder="Username">
             </div>
-            <!-- Input Password -->
-            <div class="input-container">
+            @error('username')
+                <small class="text-danger">{{ $message }}</small>
+            @enderror
+
+            <div class="input-container mb-1 mt-1">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"
+                    placeholder="Password">
             </div>
-            <!-- Input No Handphone -->
-            <div class="input-container">
+            @error('password')
+                <small class="text-danger">{{ $message }}</small>
+            @enderror
+
+            <div class="input-container mb-1 mt-1">
                 <i class="fas fa-phone"></i>
-                <input type="tel" name="hp" placeholder="No Handphone" required>
+                <input type="text" class="form-control @error('hp') is-invalid @enderror" name="hp"
+                    placeholder="No Handphone">
             </div>
-            <!-- Tombol Daftar -->
-            <button type="submit">Daftar</button>
+            @error('hp')
+                <small class="text-danger">{{ $message }}</small>
+            @enderror
+
+            <button type="submit" class="mt-3 rounded-pill">Daftar</button>
         </form>
-        <!-- Sudah punya akun -->
+
         <div class="social-login">
             <span>Sudah punya akun?
                 <a href="/login" style="color: #6dd5ed; text-decoration: none;">

@@ -72,17 +72,25 @@ class FacilitiesController extends Controller
         if ($request->hasFile('gambar')) {
             // Hapus gambar lama
             Storage::delete('public/' . $facility->gambar);
-
+        
             // Simpan gambar baru
             $gambar = $request->file('gambar');
             $path = $gambar->store('facilities', 'public');
-            $facility->gambar = $path;
+        
+            // Update data termasuk gambar
+            $facility->update([
+                'nama_fasilitas' => $request->nama_fasilitas,
+                'deskripsi' => $request->deskripsi,
+                'gambar' => $path, // Tambahkan ini agar gambar ikut diperbarui
+            ]);
+        } else {
+            // Update tanpa gambar
+            $facility->update([
+                'nama_fasilitas' => $request->nama_fasilitas,
+                'deskripsi' => $request->deskripsi,
+            ]);
         }
-
-        $facility->update([
-            'nama_fasilitas' => $request->nama_fasilitas,
-            'deskripsi' => $request->deskripsi,
-        ]);
+        
 
         return redirect()->route('fasilitas.create')->with(['success' => 'Data fasilitas berhasil diperbarui!']);
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
             padding: 0;
         }
 
-        .container { 
+        .container {
             width: 90%;
             max-width: 1200px;
             margin: 20px auto;
@@ -76,7 +77,8 @@
             min-width: 600px;
         }
 
-        table th, table td {
+        table th,
+        table td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
@@ -163,51 +165,63 @@
         }
     </style>
 </head>
-<body>
-    <div class="sidebar">
-        <h2>Admin Dashboard</h2>
-        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="#"><i class="fas fa-calendar-check"></i> Data Reservasi</a>
-        <a href="/kamar"><i class="fas fa-bed"></i> Data Kamar</a>
-        <a href="/fasilitas/create"><i class="fas fa-cogs"></i> Data Fasilitas</a>
-        <a href="/bulanan"><i class="fas fa-chart-line"></i> Laporan Bulanan</a>
-    </div>
 
+<body>
+    <x-sidebar />
     <div class="content">
         <h1 class="mb-4">Laporan Bulanan Hotel</h1>
-    <div class="container">
-        <h1></h1>
+        <div class="container">
+            <h1></h1>
 
-        <form id="laporan-form">
-            <label for="bulan">Pilih Bulan:</label>
-            <input type="month" id="bulan" name="bulan" required>
-            <button type="submit">Tampilkan</button>
-        </form>
+            <form id="laporan-form">
+                <label for="bulan">Pilih Bulan:</label>
+                <input type="month" id="bulan" name="bulan" required>
+                <button type="submit">Tampilkan</button>
+            </form>
 
-        <div id="laporan-container">
+            <div id="laporan-container">
+            </div>
         </div>
-    </div>
 
-    <script>
-        const laporanHotel = [
-            { tanggal: "2025-01-05", tamu: "John Doe", tipeKamar: "Deluxe", total: 1500000 },
-            { tanggal: "2025-01-12", tamu: "Jane Smith", tipeKamar: "Standard", total: 800000 },
-            { tanggal: "2025-01-18", tamu: "Michael Johnson", tipeKamar: "Suite", total: 2500000 },
-            { tanggal: "2025-01-22", tamu: "Emily Davis", tipeKamar: "Standard", total: 800000 }
-        ];
+        <script>
+            const laporanHotel = [{
+                    tanggal: "2025-01-05",
+                    tamu: "John Doe",
+                    tipeKamar: "Deluxe",
+                    total: 1500000
+                },
+                {
+                    tanggal: "2025-01-12",
+                    tamu: "Jane Smith",
+                    tipeKamar: "Standard",
+                    total: 800000
+                },
+                {
+                    tanggal: "2025-01-18",
+                    tamu: "Michael Johnson",
+                    tipeKamar: "Suite",
+                    total: 2500000
+                },
+                {
+                    tanggal: "2025-01-22",
+                    tamu: "Emily Davis",
+                    tipeKamar: "Standard",
+                    total: 800000
+                }
+            ];
 
-        document.getElementById("laporan-form").addEventListener("submit", function (e) {
-            e.preventDefault();
+            document.getElementById("laporan-form").addEventListener("submit", function(e) {
+                e.preventDefault();
 
-            const bulan = document.getElementById("bulan").value;
-            const laporanContainer = document.getElementById("laporan-container");
+                const bulan = document.getElementById("bulan").value;
+                const laporanContainer = document.getElementById("laporan-container");
 
-            const filteredData = laporanHotel.filter(item => item.tanggal.startsWith(bulan));
+                const filteredData = laporanHotel.filter(item => item.tanggal.startsWith(bulan));
 
-            if (filteredData.length > 0) {
-                let totalKeseluruhan = 0;
+                if (filteredData.length > 0) {
+                    let totalKeseluruhan = 0;
 
-                let table = `
+                    let table = `
                     <div class="table-container">
                         <table>
                             <thead>
@@ -222,9 +236,9 @@
                             <tbody>
                 `;
 
-                filteredData.forEach((item, index) => {
-                    totalKeseluruhan += item.total;
-                    table += `
+                    filteredData.forEach((item, index) => {
+                        totalKeseluruhan += item.total;
+                        table += `
                         <tr>
                             <td>${index + 1}</td>
                             <td>${item.tanggal}</td>
@@ -233,9 +247,9 @@
                             <td>${item.total.toLocaleString()}</td>
                         </tr>
                     `;
-                });
+                    });
 
-                table += `
+                    table += `
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -247,14 +261,16 @@
                     </div>
                 `;
 
-                laporanContainer.innerHTML = table;
-            } else {
-                laporanContainer.innerHTML = <div class="alert">Tidak ada data untuk bulan yang dipilih.</div>;
-            }
-        });
-    </script>
-    </div>       
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                    laporanContainer.innerHTML = table;
+                } else {
+                    laporanContainer.innerHTML = < div class = "alert" > Tidak ada data untuk bulan yang dipilih. <
+                        /div>;
+                }
+            });
+        </script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -11,9 +11,10 @@ body {
     height: 100vh;
 }
 
+/* Menyesuaikan tinggi container agar bertambah ke bawah */
 .login-container {
     background: rgba(255, 255, 255, 0.85); /* Warna putih dengan transparansi */
-    backdrop-filter: blur(15px); /* Efek blur di belakang */
+    backdrop-filter: blur(15px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     padding: 30px 25px;
@@ -21,23 +22,21 @@ body {
     max-width: 400px;
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
-.icon-container {
-    font-size: 48px;
-    color: #5d5d8f; /* Ungu pastel */
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-size: 24px;
-    color: #5d5d8f; /* Ungu pastel */
-    margin-bottom: 20px;
+.alert {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px; 
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
 }
 
 .input-container {
     position: relative;
-    margin-bottom: 20px;
 }
 
 .input-container i {
@@ -58,17 +57,17 @@ h2 {
     color: #333;
     background: #f7fafc;
     transition: all 0.3s ease;
-    box-sizing: border-box; /* Pastikan padding dan border dihitung dalam lebar elemen */
+    box-sizing: border-box;
 }
 
 .input-container input:focus {
-    border-color: #9ad1d4; /* Aqua pastel */
+    border-color: #9ad1d4;
     box-shadow: 0 0 8px rgba(154, 209, 212, 0.6);
     background: #ffffff;
 }
 
 button {
-    background: linear-gradient(135deg, #9ad1d4, #f6c8dc); /* Gradien aqua ke pink pastel */
+    background: linear-gradient(135deg, #9ad1d4, #f6c8dc);
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -80,7 +79,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #f6c8dc, #9ad1d4); /* Gradien berlawanan */
+    background: linear-gradient(135deg, #f6c8dc, #9ad1d4);
     box-shadow: 0 8px 20px rgba(246, 200, 220, 0.4);
     transform: translateY(-2px);
 }
@@ -93,26 +92,13 @@ button:hover {
 
 .social-login a {
     font-weight: bold;
-    color: #5d5d8f; /* Ungu pastel */
+    color: #5d5d8f;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .social-login a:hover {
-    color: #9ad1d4; /* Aqua pastel */
-}
-
-.alert {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    text-align: left;
-}
-
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    color: #9ad1d4;
 }
 
 @keyframes fadeIn {

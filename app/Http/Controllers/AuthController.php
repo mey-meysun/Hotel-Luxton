@@ -16,6 +16,14 @@ class AuthController extends Controller
 
     public function registerPost(Request $request)
     {
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'username' => 'required|string|min:3|max:20|unique:users,username',
+            'password' => 'required|min:3',
+            'hp' => 'required|digits_between:10,15|unique:users,hp',
+        ]);
+
         $user = new User();
         $user->nama = $request->nama;
         $user->email = $request->email;
@@ -24,7 +32,7 @@ class AuthController extends Controller
         $user->password_length = strlen($request->password);
         $user->hp = $request->hp;
         $user->save();
-        return back()->with('success', 'Register successfully');
+        return redirect('/login')->with('success', 'Silahkan Login.');
     }
 
     public function login()
@@ -34,15 +42,21 @@ class AuthController extends Controller
 
     public function loginPost(Request $request)
     {
+
+        $request->validate([
+            'username' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
         $credentials = $request->only('username', 'password');
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
 
             if ($user->role == 'admin') {
-                return redirect('/admin/dashboard')->with('success', 'Login Admin Berhasil');
+                return redirect('/admin/dashboard')->with('success', 'Selamat Datang ' . ucwords($user->nama) . '!');
             }
-            return redirect('/profil')->with('success', 'Login Berhasil');
+            return redirect('/profil')->with('success', 'Selamat Datang ' . ucwords($user->nama) . '!');
         }
         return back()->with('error', 'Username atau Password salah');
     }
@@ -50,7 +64,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return redirect('/login')->with('success', 'Sampai Jumpa Kembali ~');
     }
 
     public function customer()
@@ -70,7 +84,17 @@ class AuthController extends Controller
 
     public function update(Request $request)
     {
+        
         $user = Auth::user();
+
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,' . $user->id,
+            'username' => 'required|string|min:3|max:20|unique:users,username,' . $user->id,
+            'hp' => 'required|digits_between:10,15|unique:users,hp,' . $user->id,
+            'password' => 'nullable|min:3',
+        ]);
+
         $user->nama = $request->nama;
         $user->email = $request->email;
         $user->username = $request->username;
@@ -82,6 +106,6 @@ class AuthController extends Controller
         }
 
         $user->save();
-        return redirect()->route('customer.profil')->with('success', 'Profil berhasil diperbarui');
+        return redirect()->route('customer.profil')->with('success', 'Profil berhasil diperbarui.');
     }
 }

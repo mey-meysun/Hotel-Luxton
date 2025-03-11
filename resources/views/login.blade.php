@@ -20,7 +20,7 @@
                 {{ Session::get('error') }}
             </div>
         @endif
-        <form action="{{ route('login') }}" method="POST">
+        <form action="{{ route('login.post') }}" method="POST">
             @csrf
             <div class="input-container">
                 <i class="fas fa-envelope"></i>
@@ -39,6 +39,27 @@
     </div>
 
     <script src="{{ asset('assets/js/login.js') }}"></script> <!-- Memanggil file JS terpisah -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        @if(session('success'))
+            Swal.fire({
+                icon: "success",
+                title: "Berhasil!",
+                text: "{{ session('success') }}",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        @elseif(session('error'))
+            Swal.fire({
+                icon: "error",
+                title: "Gagal!",
+                text: "{{ session('error') }}",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        @endif
+    </script>
 </body>
 
 </html>
