@@ -1,96 +1,73 @@
-
-body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-}
-.tentang-kami-content {
-    max-width: 800px; 
-    margin: auto; 
-    padding: 20px 0; 
-}
-.tentang-kami .navbar {
-    position: relative; 
-    z-index: 10; 
-}
-
-.container {
-    width: 80%;
-    margin: 50px auto;
-    text-align: center;
-}
-
-h1, h2 {
-    color: #2c3e50;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
 /* Hero Section */
-.hero {
-    background: url('https://source.unsplash.com/1600x700/?hotel,luxury') center/cover no-repeat;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+.hero-section {
+    background: url('../images/luxton-banner.jpg') center/cover no-repeat;
     color: white;
-    border-radius: 10px;
+    padding: 90px 0;
+    text-align: center;
 }
 
-/* Image */
-.hotel-img {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.sub-heading {
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0.85;
 }
 
-/* Facilities Section */
-.facilities {
+/* Card Desain */
+.about-card {
     background: white;
-    padding: 50px 0;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 80%;
-    margin: auto;
+/* Gambar */
+.image-box img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.facility-item {
-    background: #ecf0f1;
+/* Fitur Box */
+.feature-box {
     padding: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Vision & Mission */
-.vision {
-    background: #495057;
+.feature-box i {
+    font-size: 45px;
+    color: #0072ff;
+    margin-bottom: 10px;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Tombol CTA */
+.btn-luxton {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
     color: white;
-    padding: 50px 20px;
-    text-align: center;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* Contact Section */
-.contact {
-    padding: 40px 20px;
-    text-align: center;
+.btn-luxton:hover {
+    background: linear-gradient(to right, #005bb5, #009fd9);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
