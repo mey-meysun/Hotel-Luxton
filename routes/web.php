@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\FacilitiesController;
 
 // untuk yg belum login
@@ -27,6 +28,10 @@ Route::get('/tipekamar', function () {
     return view('tipekamar');
 });
 
+Route::get('/crudtipekamar', function () {
+    return view('create-tipekamar');
+});
+
 Route::get('/tentangkami', function () {
     return view('tentangkami');
 });
@@ -38,6 +43,13 @@ Route::middleware('auth')->group(function () {
     // Rute untuk admin
     Route::middleware('admin')->group(function () {
         Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('admin');
+        Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
+        Route::get('/rooms/create/{id?}', [RoomController::class, 'create'])->name('rooms.create');
+        Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
+        Route::put('/room/{id}', [RoomController::class, 'update'])->name('room.update');
+        Route::delete('/rooms/{id}', [RoomController::class, 'destroy'])->name('rooms.destroy');
+        // Route::put('/room/{id}', [RoomController::class, 'update'])->name('rooms.update');
+        // Route::delete('/room/{id}', [RoomController::class, 'destroy'])->name('rooms.destroy');
         Route::get('/fasilitas/create/{id?}', [FacilitiesController::class, 'create'])->name('fasilitas.create');
         Route::post('/fasilitas', [FacilitiesController::class, 'store'])->name('fasilitas.store');
         Route::put('/fasilitas/{id}', [FacilitiesController::class, 'update'])->name('fasilitas.update');
