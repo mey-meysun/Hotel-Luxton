@@ -10,20 +10,24 @@ use Illuminate\Support\Facades\Storage;
 
 class RoomController extends Controller
 {
+
     public function index(): View
+{
+    $rooms = Room::latest()->get(); // Ambil semua kamar
+    dd($rooms); // Debugging: Tampilkan isi $rooms
+    return view('rooms-index', compact('rooms'));
+}
+    
+    // public function index(): View
+    // {
+    //     $rooms = Room::latest()->get(); // Ambil semua kamar
+    //     return view('rooms-index', compact('rooms')); // Kirimkan $rooms ke view
+    // }
+    public function create()
     {
-        $rooms = Room::latest()->get(); // Ambil semua kamar
-        return view('rooms-index', compact('rooms'));
+        $rooms = Room::all(); // Ambil semua kamar dari database
+        return view('create-tipekamar', compact('rooms'));
     }
-
-    public function create(string $id = null): View
-    {
-        $room = $id ? Room::find($id) : null;
-        $rooms = Room::latest()->paginate(10); // Ambil semua kamar untuk ditampilkan di tabel
-
-        return view('rooms-create', compact('room', 'rooms'));
-    }
-
     public function store(Request $request): RedirectResponse
 {
     $request->validate([
@@ -50,8 +54,6 @@ class RoomController extends Controller
 
     return redirect()->route('room.create')->with(['success' => 'Kamar berhasil ditambahkan!']);
 }
-
-      
 
     public function edit(string $id): View
     {

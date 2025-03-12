@@ -36,6 +36,9 @@ Route::get('/tentangkami', function () {
     return view('tentangkami');
 });
 
+
+
+
 // untuk yg sudah login
 Route::middleware('auth')->group(function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -43,7 +46,8 @@ Route::middleware('auth')->group(function () {
     // Rute untuk admin
     Route::middleware('admin')->group(function () {
         Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('admin');
-        Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
+        Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
+        // Route::get('/room/create/{id?}', [RoomController::class, 'create'])->name('room.create');
         Route::get('/rooms/create/{id?}', [RoomController::class, 'create'])->name('rooms.create');
         Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
         Route::put('/room/{id}', [RoomController::class, 'update'])->name('room.update');

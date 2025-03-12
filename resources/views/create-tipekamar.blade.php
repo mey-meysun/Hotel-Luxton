@@ -87,7 +87,31 @@
 </tr>
 </thead>
 <tbody>
-@forelse ($rooms as $room)
+    @forelse ($rooms as $room)
+    <tr>
+        <td>{{ $room->no_kamar }}</td>
+        <td>{{ $room->tipe_kamar }}</td>
+        <td>{{ $room->harga_kamar }}</td>
+        <td>{{ $room->status_kamar }}</td>
+        <td>{{ $room->deskripsi_kamar }}</td>
+        <td class="text-center">
+            <img src="{{ asset('/storage/' . $room->gambar) }}" class="rounded" style="width: 150px">
+        </td>
+        <td class="text-center">
+            <form onsubmit="return confirm('Apakah Anda yakin ingin menghapus kamar ini?');" action="{{ route('rooms.destroy', $room->id) }}" method="POST">
+                <a href="{{ route('rooms.create', $room->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-sm btn-danger">hapus</button>
+            </form>
+        </td>
+    </tr>
+@empty
+    <tr>
+        <td colspan="7" class="text-center text-danger">Data room belum tersedia.</td>
+    </tr>
+@endforelse
+{{-- @forelse ($rooms as $room)
     <tr>
         <td>{{ $room->no_kamar }}</td>
         <td>{{ $room->tipe_kamar }}</td>
@@ -114,7 +138,7 @@
     <tr>
         <td colspan="7" class="text-center text-danger">Data room belum tersedia.
     </tr>
-@endforelse
+@endforelse --}}
 </tbody>
 </table>
 </div>
