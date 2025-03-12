@@ -130,3 +130,11 @@ body {
     color: #888;
     font-size: 1.2rem;
 }
+/* Sembunyikan ikon mata bawaan browser */
+input::-ms-reveal,
+input::-ms-clear,
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+    display: none;
+}
+

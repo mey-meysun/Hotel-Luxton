@@ -28,8 +28,8 @@
             </div>
             <div class="input-container">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Password" required>
-                <i class="fas fa-eye eye-icon" id="toggle-password"></i>
+                <input type="password" name="password" id="password" placeholder="Password" autocomplete="new-password" required>
+                <i class="fas fa-eye eye-icon hide" id="toggle-password"></i>
             </div>
             <button type="submit">Login</button>
         </form>
@@ -59,7 +59,29 @@
                 timer: 2000
             });
         @endif
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const passwordInput = document.querySelector("#password");
+            const togglePassword = document.querySelector("#toggle-password");
+
+            if (passwordInput && togglePassword) {
+                togglePassword.addEventListener("click", function () {
+                    const isPasswordVisible = passwordInput.type === "text";
+                    passwordInput.type = isPasswordVisible ? "password" : "text";
+                    this.classList.toggle("fa-eye");
+                    this.classList.toggle("fa-eye-slash");
+                });
+            }
+        });
     </script>
+
+    <style>
+        /* Tambahin cursor pointer supaya ikon bisa diklik */
+        .eye-icon {
+            cursor: pointer;
+        }
+    </style>
+
 </body>
 
 </html>
