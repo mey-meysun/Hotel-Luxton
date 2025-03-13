@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,8 +13,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function customer(){
-        return view('dashboard-user');
+    public function customer() {
+        $reservations = Reservation::where('user_id', Auth::id())->get();
+        return view('dashboard-user', compact('reservations'));
     }
 
     public function profil(){
@@ -21,4 +25,6 @@ class HomeController extends Controller
     public function profiledit(){
         return view('profiledit');
     }
+
+    
 }

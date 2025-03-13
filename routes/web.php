@@ -5,6 +5,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FacilitiesController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\PaymentController;
+
+Route::resource('reservations', ReservationController::class)->middleware('auth');
 
 // untuk yg belum login
 Route::group(['middleware' => 'guest'], function () {
@@ -21,7 +25,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/fasilitas',[FacilitiesController::class, 'index'])->name('fasilitas');
+Route::get('/fasilitas', [FacilitiesController::class, 'index'])->name('fasilitas');
 
 Route::get('/tipekamar', function () {
     return view('tipekamar');
@@ -45,14 +49,22 @@ Route::middleware('auth')->group(function () {
         Route::get('/bulanan', function () {
             return view('bulanan');
         });
+        Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index'); // Daftar reservasi
+        Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit'])->name('reservations.edit'); // Form edit
+        Route::put('/reservations/{id}', [ReservationController::class, 'update'])->name('reservations.update'); // Proses edit
+        Route::delete('/reservations/{id}', [ReservationController::class, 'destroy'])->name('reservations.destroy'); // Hapus reservasi
+        Route::post('/payment/{id}/verify', [PaymentController::class, 'verify'])->name('payment.verify');
     });
 
     // Rute untuk customer
     Route::middleware('customer')->group(function () {
         Route::get('/user/dashboard', [HomeController::class, 'customer'])->name('customer.dashboard');
         Route::get('/profil', [HomeController::class, 'profil'])->name('customer.profil')->middleware('customer');
+        Route::get('/reservations/create/{room_id?}', [ReservationController::class, 'create'])->name('reservations.create'); // Form buat reservasi
+        Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store'); // Simpan reservasi
+        Route::get('/payment/{id}', [PaymentController::class, 'show'])->name('payment.show');
+        Route::post('/payment/{id}/pay', [PaymentController::class, 'pay'])->name('payment.pay');
     });
-
     Route::get('/edit', [AuthController::class, 'edit'])->name('customer.edit');
     Route::put('/update/{id}', [AuthController::class, 'update'])->name('customer.update');
 });

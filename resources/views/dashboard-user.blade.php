@@ -2,23 +2,28 @@
     <link href="{{ asset('assets/css/dashboard.css') }}" rel="stylesheet">
     <div class="container mt-5">
         <h1 class="text-center mb-4">
-            <i class="fa-solid fa-calendar-check me-2"></i>Dashboard Reservasi
+            <i class="fa-solid fa-calendar-check me-2"></i> Dashboard Reservasi
         </h1>
 
         {{-- Pesan Sukses --}}
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fa-solid fa-circle-check me-2"></i> Reservasi berhasil disimpan! (contoh placeholder)
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fa-solid fa-circle-check me-2"></i> {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 
         {{-- Kartu Daftar Reservasi --}}
         <div class="card shadow-lg">
             <div class="card-header bg-primary text-white">
                 <h5 class="mb-0">
-                    <i class="fa-solid fa-list me-2"></i>Daftar Reservasi
+                    <i class="fa-solid fa-list me-2"></i> Daftar Reservasi Saya
                 </h5>
             </div>
             <div class="card-body">
+                @if($reservations->isEmpty())
+                    <p class="text-center">Belum ada reservasi.</p>
+                @else
                 {{-- Tabel Reservasi --}}
                 <div class="table-responsive">
                     <table class="table table-striped align-middle">
@@ -32,55 +37,54 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- Contoh Data --}}
+                            @foreach($reservations as $reservation)
                             <tr>
-                                <td><strong>RES123456</strong></td>
+                                <td><strong>RES{{ str_pad($reservation->id, 6, '0', STR_PAD_LEFT) }}</strong></td>
                                 <td>
-                                    <span class="badge bg-success">
-                                        <i class="fa-solid fa-circle-check me-1"></i> Sudah Dibayar
-                                    </span>
+                                    @if($reservation->status_pembayaran === 'Pending')
+                                        <span class="badge bg-warning text-dark">
+                                            <i class="fa-solid fa-hourglass-half me-1"></i> Belum Dibayar
+                                        </span>
+                                    @elseif($reservation->status_pembayaran === 'Paid')
+                                        <span class="badge bg-secondary">
+                                            <i class="fa-solid fa-clock me-1"></i> Menunggu Verifikasi
+                                        </span>
+                                    @else
+                                        <span class="badge bg-success">
+                                            <i class="fa-solid fa-circle-check me-1"></i> Verified
+                                        </span>
+                                    @endif
                                 </td>
-                                <td>24 Jan 2025</td>
-                                <td>27 Jan 2025</td>
+                                <td>{{ \Carbon\Carbon::parse($reservation->check_in)->format('d M Y') }}</td>
+                                <td>{{ \Carbon\Carbon::parse($reservation->check_out)->format('d M Y') }}</td>
                                 <td>
-                                    <button class="btn btn-sm btn-secondary" disabled>
-                                        <i class="fa-solid fa-lock me-1"></i> Non-Aktif
-                                    </button>
+                                    @if($reservation->status_pembayaran === 'Pending')
+                                        <a href="{{ route('payment.show', $reservation->id) }}" class="btn btn-sm btn-primary">
+                                            <i class="fa-solid fa-credit-card me-1"></i> Bayar
+                                        </a>
+                                        <form action="{{ route('reservations.destroy', $reservation->id) }}" method="POST" style="display:inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin batalkan reservasi ini?')">
+                                                <i class="fa-solid fa-trash me-1"></i> Batalkan
+                                            </button>
+                                        </form>
+                                    @elseif($reservation->status_pembayaran === 'Paid')
+                                        <button class="btn btn-sm btn-secondary" disabled>
+                                            <i class="fa-solid fa-clock me-1"></i> Menunggu Verifikasi
+                                        </button>
+                                    @else
+                                        <button class="btn btn-sm btn-success" disabled>
+                                            <i class="fa-solid fa-check me-1"></i> Lunas
+                                        </button>
+                                    @endif
                                 </td>
                             </tr>
-                            <tr>
-                                <td><strong>RES654321</strong></td>
-                                <td>
-                                    <span class="badge bg-warning text-dark">
-                                        <i class="fa-solid fa-hourglass-half me-1"></i> Belum Dibayar
-                                    </span>
-                                </td>
-                                <td>1 Feb 2025</td>
-                                <td>5 Feb 2025</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger">
-                                        <i class="fa-solid fa-trash me-1"></i> Batalkan
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><strong>RES789012</strong></td>
-                                <td>
-                                    <span class="badge bg-warning text-dark">
-                                        <i class="fa-solid fa-hourglass-half me-1"></i> Belum Dibayar
-                                    </span>
-                                </td>
-                                <td>10 Feb 2025</td>
-                                <td>15 Feb 2025</td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger">
-                                        <i class="fa-solid fa-trash me-1"></i> Batalkan
-                                    </button>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
+                @endif
             </div>
         </div>
     </div>

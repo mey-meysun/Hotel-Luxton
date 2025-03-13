@@ -13,14 +13,13 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('room_id')->constrained()->onDelete('cascade');
             $table->date('check_in');
             $table->date('check_out');
-            $table->string('jumlah_tamu');
-            $table->string('tipe_kamar');
-            $table->string('no_kamar');
-            $table->enum('status_pembayaran', ['pending, paid, verified']);
-            $table->enum('status_pemesanan', ['pending, confirmed, checked-In, canceled, completed']);
+            $table->integer('jumlah_tamu');
+            $table->enum('status_reservasi', ['Pending', 'Confirmed', 'Checked-in', 'Completed', 'Canceled'])->default('Pending');
+            $table->enum('status_pembayaran', ['Pending', 'Paid', 'Verified'])->default('Pending');
             $table->timestamps();
         });
     }
