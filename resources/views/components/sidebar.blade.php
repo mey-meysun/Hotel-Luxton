@@ -5,8 +5,9 @@
 <div class="sidebar">
     <h2>Admin Dashboard</h2>
     <a href="/admin/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-    <a href="#"><i class="fas fa-calendar-check"></i> Data Reservasi</a>
-    <a href="/tipekamar"><i class="fas fa-bed"></i> Data Kamar</a>
+    <a href="{{ route('reservations.index') }}"><i class="fas fa-calendar-check"></i> Data Reservasi</a>
+    <a href="/kamar"><i class="fas fa-bed"></i> Data Kamar</a>
+    {{-- <a href="/tipekamar"><i class="fas fa-bed"></i> Data Kamar</a> --}}
     <a href="/crudtipekamar"><i class="fas fa-bed"></i>Edit Data Kamar</a>
     <a href="/fasilitas/create"><i class="fas fa-cogs"></i> Data Fasilitas</a>
     <a href="/bulanan"><i class="fas fa-chart-line"></i> Laporan Bulanan</a>
