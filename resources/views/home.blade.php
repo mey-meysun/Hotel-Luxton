@@ -37,15 +37,15 @@
                         <div class="row align-items-center justify-content-center">
                             <div class="col-md-8">
                                 <div class="site-hero-contents text-center" data-aos="fade-up">
-                                    <h1 class="hero-heading">LuxtonHotel by Untree.co</h1>
-                                    <div class="sub-text">
+                                    <h1 class="hero-heading">Welcome to LuxtonHotel</h1>
+                                    {{-- <div class="sub-text">
                                         <p>Another free awesome templates for Hotels and any kind of website by <a
                                                 href="https://untree.co/" target="_blank"
                                                 class="text-white font-weight-bold">Untree.co</a>. See our <a
                                                 href="https://untree.co/license/"
                                                 class="text-white font-weight-bold">license page</a> for more usage
                                             details</p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

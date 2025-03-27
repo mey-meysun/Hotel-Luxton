@@ -32,7 +32,7 @@
                               <h3 class="card-title" style="color: #FF5733; font-weight: bold;">
                                 {{ $facility->nama_fasilitas }}
                             </h3>                            
-                                <p class="card-text" style="color: #6c757d;">{{ $facility->deskripsi }}</p>
+                                <p class="card-text" style="color: #6c757d; font-size: 14px;">{{ $facility->deskripsi }}</p>
                             </div>
                         </div>
                     </div>

@@ -59,7 +59,7 @@
                                 <td>{{ \Carbon\Carbon::parse($reservation->check_out)->format('d M Y') }}</td>
                                 <td>
                                     @if($reservation->status_pembayaran === 'Pending')
-                                        <a href="{{ route('payment.show', $reservation->id) }}" class="btn btn-sm btn-primary">
+                                        <a href="{{ route('payment.show', $reservation->id) }}" class="btn btn-sm btn-primary rounded-pill">
                                             <i class="fa-solid fa-credit-card me-1"></i> Bayar
                                         </a>
                                         <form action="{{ route('reservations.destroy', $reservation->id) }}" method="POST" style="display:inline;">

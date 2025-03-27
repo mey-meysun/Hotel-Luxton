@@ -1,40 +1,56 @@
 <x-layout>
-
-    <div class="container">
+    <div class="container pt-5">
         <h1>Buat Reservasi</h1>
 
-        @if(session('error'))
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+        @if (session('error'))
             <div class="alert alert-danger">{{ session('error') }}</div>
         @endif
+
+        {{-- Menampilkan error spesifik dari validasi form --}}
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger">{{ $error }}</div>
+        @endforeach
 
         <form action="{{ route('reservations.store') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="room_id" class="form-label">Pilih Kamar</label>
-                <select name="room_id" id="room_id" class="form-control" required>
-                    <option value="">-- Pilih Kamar --</option>
-                    @foreach($rooms as $room)
-                        <option value="{{ $room->id }}">{{ $room->nomor_kamar }} - {{ $room->tipe_kamar }} (Rp {{ number_format($room->harga_per_malam) }})</option>
+                <label for="nama" class="form-label">Nama Customer</label>
+                <input type="text" name="nama" id="nama" class="form-control" required
+                    value="{{ auth()->user()->nama }}" readonly>
+            </div>
+
+            <div class="mb-3">
+                <label for="tipe_kamar" class="form-label">Pilih Tipe Kamar</label>
+                <select name="tipe_kamar" id="tipe_kamar" class="form-control" required>
+                    <option value="">-- Pilih Tipeaa Kamar --</option>
+                    @foreach ($rooms->unique('tipe_kamar') as $room)
+                        <option value="{{ $room->tipe_kamar }}"
+                            {{ $selectedRoom && $selectedRoom->tipe_kamar == $room->tipe_kamar ? 'selected' : '' }}>
+                            {{ $room->tipe_kamar }} (Rp {{ number_format($room->harga_kamar, 0, ',', '.') }})
+                        </option>
                     @endforeach
+
                 </select>
             </div>
 
             <div class="mb-3">
-                <label for="check_in" class="form-label">Tanggal Check-in</label>
-                <input type="date" name="check_in" id="check_in" class="form-control" required>
+                <label>Check-in</label>
+                <input type="date" name="check_in" class="form-control" required>
             </div>
-
             <div class="mb-3">
-                <label for="check_out" class="form-label">Tanggal Check-out</label>
-                <input type="date" name="check_out" id="check_out" class="form-control" required>
+                <label>Check-out</label>
+                <input type="date" name="check_out" class="form-control" required>
             </div>
-
             <div class="mb-3">
-                <label for="jumlah_tamu" class="form-label">Jumlah Tamu</label>
-                <input type="number" name="jumlah_tamu" id="jumlah_tamu" class="form-control" required>
+                <label>Jumlah Tamu</label>
+                <input type="number" name="jumlah_tamu" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Reservasi</button>
+            <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
         </form>
+
     </div>
 </x-layout>

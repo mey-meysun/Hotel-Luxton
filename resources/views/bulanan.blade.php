@@ -73,8 +73,12 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
             min-width: 600px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
         }
 
         table th,
@@ -85,23 +89,13 @@
         }
 
         table th {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        table tfoot th {
-            background-color: black;
+            background-color: #4a90e2;
             color: white;
         }
 
-        .alert {
-            padding: 15px;
-            background-color: #ffc107;
-            color: #856404;
-            border: 1px solid #ffeeba;
-            border-radius: 4px;
-            margin-top: 20px;
-            text-align: center;
+        table tfoot th {
+            background-color: #818181;
+            color: white;
         }
 
         /* Sidebar Styling */
@@ -171,103 +165,61 @@
     <div class="content">
         <h1 class="mb-4">Laporan Bulanan Hotel</h1>
         <div class="container">
-            <h1></h1>
+            <h2>Laporan Bulanan</h2>
 
-            <form id="laporan-form">
+            {{-- Form untuk memilih bulan --}}
+            <form action="{{ route('laporan.bulanan') }}" method="GET">
                 <label for="bulan">Pilih Bulan:</label>
-                <input type="month" id="bulan" name="bulan" required>
+                <input type="month" id="bulan" name="bulan" value="{{ request('bulan') }}" required>
                 <button type="submit">Tampilkan</button>
             </form>
 
-            <div id="laporan-container">
-            </div>
+            <br>
+
+            {{-- Cek apakah ada data --}}
+            @if ($laporan->count() > 0)
+                <div class="table-container">
+                    <table border="1" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th>Kode</th>
+                                <th>Nama Tamu</th>
+                                <th>Tipe Kamar</th>
+                                <th>Jumlah Malam</th>
+                                <th>Total (Rp)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($laporan as $index => $item)
+                                <tr>
+                                    <td>RES{{ str_pad($item->id, 6, '0', STR_PAD_LEFT) }}</td>
+                                    <td>{{ $item->nama }}</td>
+                                    <td>{{ $item->tipe_kamar }}</td>
+
+                                    @php
+                                        $jumlahMalam = \Carbon\Carbon::parse($item->check_in)->diffInDays(
+                                            \Carbon\Carbon::parse($item->check_out),
+                                        );
+                                        $totalHarga = $item->room->harga_kamar * $jumlahMalam;
+                                    @endphp
+                                    <td>{{ $jumlahMalam }}</td>
+                                    <td>Rp {{ number_format($totalHarga, 0, ',', '.') }}</td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="4">Total Keseluruhan</th>
+                                <th>{{ number_format($laporan->count(), 0, ',', '.') }}</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            @else
+                <div class="text text-danger">Tidak ada data untuk bulan yang dipilih.</div>
+            @endif
         </div>
-
-        <script>
-            const laporanHotel = [{
-                    tanggal: "2025-01-05",
-                    tamu: "John Doe",
-                    tipeKamar: "Deluxe",
-                    total: 1500000
-                },
-                {
-                    tanggal: "2025-01-12",
-                    tamu: "Jane Smith",
-                    tipeKamar: "Standard",
-                    total: 800000
-                },
-                {
-                    tanggal: "2025-01-18",
-                    tamu: "Michael Johnson",
-                    tipeKamar: "Suite",
-                    total: 2500000
-                },
-                {
-                    tanggal: "2025-01-22",
-                    tamu: "Emily Davis",
-                    tipeKamar: "Standard",
-                    total: 800000
-                }
-            ];
-
-            document.getElementById("laporan-form").addEventListener("submit", function(e) {
-                e.preventDefault();
-
-                const bulan = document.getElementById("bulan").value;
-                const laporanContainer = document.getElementById("laporan-container");
-
-                const filteredData = laporanHotel.filter(item => item.tanggal.startsWith(bulan));
-
-                if (filteredData.length > 0) {
-                    let totalKeseluruhan = 0;
-
-                    let table = `
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Tanggal</th>
-                                    <th>Nama Tamu</th>
-                                    <th>Tipe Kamar</th>
-                                    <th>Total (Rp)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                `;
-
-                    filteredData.forEach((item, index) => {
-                        totalKeseluruhan += item.total;
-                        table += `
-                        <tr>
-                            <td>${index + 1}</td>
-                            <td>${item.tanggal}</td>
-                            <td>${item.tamu}</td>
-                            <td>${item.tipeKamar}</td>
-                            <td>${item.total.toLocaleString()}</td>
-                        </tr>
-                    `;
-                    });
-
-                    table += `
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th colspan="4">Total Keseluruhan</th>
-                                    <th>${totalKeseluruhan.toLocaleString()}</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                `;
-
-                    laporanContainer.innerHTML = table;
-                } else {
-                    laporanContainer.innerHTML = < div class = "alert" > Tidak ada data untuk bulan yang dipilih. <
-                        /div>;
-                }
-            });
-        </script>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

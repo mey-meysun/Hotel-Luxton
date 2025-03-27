@@ -1,22 +1,22 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Laporan;
+use App\Models\Reservation;
 
 class LaporanController extends Controller
 {
-    public function bulanan(Request $request)
+    public function laporanBulanan(Request $request)
     {
-        $bulan = $request->input('bulan');
-        $laporan = [];
+        $bulan = $request->input('bulan'); // Ambil bulan dari input form
 
-        if ($bulan) {
-            $laporan = Laporan::whereMonth('tanggal', date('m', strtotime($bulan)))
-                ->whereYear('tanggal', date('Y', strtotime($bulan)))
-                ->get();
-        }
+        // Ambil data kamar yang statusnya "Completed" dan sesuai bulan yang dipilih
+        $laporan = Reservation::where('status_pemesanan', 'Completed')
+            ->where('check_in', 'like', "$bulan%")
+            ->with('room') // Ambil relasi room
+            ->get();
 
-        return view('laporan.bulanan', compact('laporan'));
+        return view('bulanan', compact('laporan'));
     }
 }
