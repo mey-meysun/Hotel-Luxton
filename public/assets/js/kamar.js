@@ -12,4 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 : "AMENITIES ▼";
         });
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 6d1d93d289aa7286b47f04e60a3abe3b9a2407b2

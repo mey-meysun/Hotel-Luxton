@@ -1,20 +1,7 @@
 <x-layout>
     @section('head')
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
 @endsection
-
-@section('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        jarallax(document.querySelectorAll('.jarallax'), {
-            speed: 0.5
-        });
-    });
-</script>
-@endsection
-
 
     <!doctype html>
     <html lang="en">
@@ -119,66 +106,92 @@
                         </div>
                     </div>
                 </div>
-            
-                <div class="container-fluid pt-5">
-                    <div class="suite-wrap overlap-image-1">
 
-                        <div class="suite">
-                            <div class="image-stack">
-                                <div class="image-stack-item image-stack-item-top jarallax" data-jarallax-element="-30">
-                                    <div class="overlay"></div>
-                                    <img src="{{ asset('assets/images/room_1_a.jpg') }}" alt="Image"
-                                        class="img-fluid pic1">
-                                </div>
-                                <div class="image-stack-item image-stack-item-bottom">
-                                    <div class="overlay"></div>
-                                    <img src="{{ asset('assets/images/room_1_b.jpg') }}" alt="Image"
-                                        class="img-fluid pic2">
-                                </div>
-                            </div>
-                        </div> <!-- .suite -->
-
-                        <div class="suite-contents" data-jarallax-element="30">
-                            <h2 class="suite-title">King Bedroom</h2>
-                            <div class="suite-excerpt">
-                                <p>A hotel is an establishment that provides paid lodging on a short-term basis.
-                                    Facilities provided may range from a modest-quality mattress in a small room to
-                                    large suites with bigger.</p>
-                                <p><a href="#" class="readmore">Room Details</a></p>
+                <section class="room-list">
+                    <div class="room">
+                        <div class="room-image">
+                            <img src="{{ asset('assets/images/kamar2.jpg') }}" alt="Standard Room">
+                        </div>
+                        <div class="room-info">
+                            <h2>Standard Room</h2>
+                            <p>Kamar dengan desain simpel dan nyaman, cocok untuk Anda yang mencari tempat menginap dengan suasana tenang dan menyenangkan.</p>
+                
+                            <div class="amenities">
+                                <button class="toggle-btn">AMENITIES ▼</button>
+                                <ul class="amenities-list">
+                                    <li>TV 42 Inch</li>
+                                    <li>AC & Pemanas Ruangan</li>
+                                    <li>WiFi Gratis</li>
+                                    <li>Shower Air Panas</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="suite-wrap overlap-image-2">
-
-                        <div class="suite">
-                            <div class="image-stack">
-                                <div class="image-stack-item image-stack-item-top">
-                                    <div class="overlay"></div>
-                                    <img src="{{ asset('assets/images/room_2_a.jpg') }}" alt="Image"
-                                        class="img-fluid pic1">
-                                </div>
-                                <div class="image-stack-item image-stack-item-bottom" data-jarallax-element="-30">
-                                    <div class="overlay"></div>
-                                    <img src="{{ asset('assets/images/room_2_b.jpg') }}" alt="Image"
-                                        class="img-fluid pic2">
-                                </div>
+                    <div class="room">
+                        <div class="room-image">
+                            <img src="{{ asset('assets/images/kamar1.jpg') }}" alt="Superior Room">
+                        </div>
+                        <div class="room-info">
+                            <h2>Superior Room</h2>
+                            <p>Menawarkan ruang lebih luas dengan sentuhan desain yang modern dan elegan. 
+                                Pilihan yang tepat bagi tamu yang menginginkan kenyamanan ekstra selama menginap.</p>
+                
+                            <div class="amenities">
+                                <button class="toggle-btn">AMENITIES ▼</button>
+                                <ul class="amenities-list">
+                                    <li>TV 42 Inch</li>
+                                    <li>AC & Pemanas Ruangan</li>
+                                    <li>WiFi Gratis</li>
+                                    <li>Shower Air Panas</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div class="suite-contents" data-jarallax-element="30">
-                            <h2 class="suite-title">Queen &amp; Double Bedroom</h2>
-                            <div class="suite-excerpt pr-5">
-                                <p>A hotel is an establishment that provides paid lodging on a short-term basis.
-                                    Facilities provided may range from a modest-quality mattress in a small room to
-                                    large suites with bigger</p>
-                                <p><a href="#" class="readmore">Room Details</a></p>
-                            </div>
-                        </div>
-
                     </div>
 
-                </div>
+                    <div class="room">
+                        <div class="room-image">
+                            <img src="{{ asset('assets/images/kamar3.jpg') }}" alt="Deluxe Room">
+                        </div>
+                        <div class="room-info">
+                            <h2>Deluxe Room</h2>
+                            <p>Menghadirkan pengalaman menginap yang lebih mewah dengan suasana yang lebih eksklusif. 
+                                Cocok untuk tamu yang menginginkan keleluasaan dan kenyamanan lebih.</p>
+
+                            <div class="amenities">
+                                <button class="toggle-btn">AMENITIES ▼</button>
+                                <ul class="amenities-list">
+                                    <li>TV 42 Inch</li>
+                                    <li>AC & Pemanas Ruangan</li>
+                                    <li>WiFi Gratis</li>
+                                    <li>Shower Air Panas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="room">
+                        <div class="room-image">
+                            <img src="{{ asset('assets/images/kamarr.jpg') }}" alt="Executive Room">
+                        </div>
+                        <div class="room-info">
+                            <h2>Executive Room</h2>
+                            <p>Pilihan terbaik bagi tamu yang menginginkan kemewahan dan eksklusivitas. 
+                                Dengan desain elegan dan ruang yang luas, kamar ini memberikan pengalaman menginap yang istimewa.</p>
+                
+                            <div class="amenities">
+                                <button class="toggle-btn">AMENITIES ▼</button>
+                                <ul class="amenities-list">
+                                    <li>TV 50 Inch</li>
+                                    <li>Mini Bar</li>
+                                    <li>Shower & Bathtub</li>
+                                    <li>WiFi Kecepatan Tinggi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
+                
             </div>
 
             <div class="untree_co--site-section">
