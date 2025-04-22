@@ -34,11 +34,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/ulasan" class="@if (Request::is('profil','tentangkami')) text-dark @endif">
-                            Ulasan
-                        </a>
-                    </li>
-                    <li>
                         <a href="/tentangkami" class="@if (Request::is('profil','tentangkami')) text-dark @endif">
                             Tentang Kami
                         </a>

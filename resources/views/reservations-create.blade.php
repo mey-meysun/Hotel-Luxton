@@ -25,7 +25,7 @@
             <div class="mb-3">
                 <label for="tipe_kamar" class="form-label">Pilih Tipe Kamar</label>
                 <select name="tipe_kamar" id="tipe_kamar" class="form-control" required>
-                    <option value="">-- Pilih Tipeaa Kamar --</option>
+                    <option value="">-- Pilih Tipe Kamar --</option>
                     @foreach ($rooms->unique('tipe_kamar') as $room)
                         <option value="{{ $room->tipe_kamar }}"
                             {{ $selectedRoom && $selectedRoom->tipe_kamar == $room->tipe_kamar ? 'selected' : '' }}>
